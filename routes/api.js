@@ -4,20 +4,20 @@ const nuggut = require('../models/nuggut');
 
 router.get('/nuggut', (req, res, next) => {
 		nuggut
-		.find({}, 'item')
+		.find({}, 'chore')
 		.then(data => res.json(data))
 		.catch(next)
 });
 
 router.post('/nuggut', (req, res, next) => {
-    if (req.body.item) {
+    if (req.body.chore) {
         nuggut
             .create(req.body)
             .then(data => res.json(data))
             .catch(next);
     }
     else {
-        res.json({ error: "The item field is empty" })
+        res.json({ error: "The chore field is empty" })
     }
 });
 
