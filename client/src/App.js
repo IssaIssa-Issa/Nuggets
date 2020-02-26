@@ -7,7 +7,9 @@ import NavButtons from './Components/NavButtons';
 import Footer from './Components/Footer'
 import login from './Components/login'
 import ParentContainer from './Components/ParentContainer';
-import ChildContainer from './Components/ChildContainer'
+import ChildContainer from './Components/ChildContainer';
+import Callback from './callback';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <div>
         <NavButtons />
         <Route exact path="/" component={login} />
+        <Route exact path='/callback' component={Callback} exact />
         <Route exact path="/parent" component={ParentContainer} />
         <Route path="/child" component={ChildContainer} />
       </div>
