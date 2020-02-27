@@ -1,9 +1,9 @@
 import React from 'react'
 import KidCard from './KidCard'
 import PendingTranList from './PendingTranList'
-import AddChildBtn from './addChildBtn'
-import AddFundsBtn from './addFundsBtn'
-import AddChoresBtn from './addChoresBtn'
+import ManageChildBtn from './manageChildBtn'
+import ManageFundsBtn from './manageFundsBtn'
+import ManageChoresBtn from './manageChoresBtn'
 
 const ParentContainer = () => {
     return (
@@ -12,13 +12,13 @@ const ParentContainer = () => {
                 <div className="col-md-3"></div>
 
                 <div className="col-md-2">
-                    <AddChildBtn />
+                    <ManageChildBtn />
                 </div>
                 <div className="col-md-2">
-                    <AddFundsBtn />
+                    <ManageFundsBtn />
                 </div>
                 <div className="col-md-2">
-                    <AddChoresBtn />
+                    <ManageChoresBtn />
                 </div>
                 <div className="col-md-3"></div>
 
