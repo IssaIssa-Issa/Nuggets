@@ -1,26 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react';
+import '../App.css';
+import auth0Client from '../auht';
+
 
 const Login = () => {
-return(
-    <form>
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-  <div className="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div className="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-  </div>
+  class Login extends Component {
+  componentDidMount() {
+    if (!auth0Client.isAuthenticated()) {
+        auth0Client.signIn();
+      }
+    }
+  signOut = () => {
+    auth0Client.signOut();
+    this.props.history.replace('/');
+    }
+  render() {
 
-  <button type="submit" className="btn btn-primary">Submit</button>
-  </div>
-  <div class="col-md-4"></div>
-  </div>
-</form>
-)}
 
+    return (
+      <div className="App" >
+          <header className="App-header">
+              {
+                  auth0Client.isAuthenticated() &&
+                  <div>
+                      <label className="mr-2 text-white">{auth0Client.getProfile().name}</label>
+                      <br />
+                      <button className="btn btn-dark" onClick={() => { this.signOut() }}>Sign Out</button>
+                  </div>
+              }
+
+          </header>
+      </div>
+  )
+}
+}
+}
 export default Login
