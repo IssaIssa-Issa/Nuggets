@@ -10,7 +10,8 @@ module.exports = function (sequelize, DataTypes) {
         amount: Sequelize.DECIMAL,
         admin_id: Sequelize.INTEGER,
         child_id: Sequelize.INTEGER,
-        admin_notes: Sequelize.STRING
+		admin_notes: Sequelize.STRING,
+		date_created: Sequelize.DATEONLY
 	},
 	{
 	  tableName: "transactions"
