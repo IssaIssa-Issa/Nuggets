@@ -6,7 +6,9 @@ const ParentContainer = () => {
 return(
 <div>
     <KidCard /> 
-    <KidCard />
+    <br></br>
+    <br></br>
+    <br></br>
     <PendingTranList />
 </div>
 )
