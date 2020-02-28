@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Header from './Components/Header'
-import login from './Components/login'
-import ParentContainer from './Components/ParentContainer';
-import ChildContainer from './Components/ChildContainer';
+import Header from './Components/Containers/Header'
+import login from './Components/Containers/login'
+import ParentContainer from './Components/Containers/ParentContainer';
+import ChildContainer from './Components/Containers/ChildContainer';
 import Callback from './callback';
-import ManageFundsForm from './Components/ManageFundsForm'
-import ManageChoresForm from './Components/ManageChoresForm'
-import ManageChildForm from './Components/ManageChildForm'
+import ManageFundsForm from './Components/Forms/ManageFundsForm'
+import ManageChoresForm from './Components/Forms/ManageChoresForm'
+import ManageChildForm from './Components/Forms/ManageChildForm'
 
 function App() {
 

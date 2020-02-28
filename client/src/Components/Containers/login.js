@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../App.css';
-import auth0Client from '../auht';
+import '../../App.css';
+import auth0Client from '../../auth';
 
 
 const Login = () => {
