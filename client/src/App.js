@@ -20,7 +20,7 @@ function App() {
             <div>
               <Route exact path="/" component={login} />
               <Route exact path="/parent" component={ParentContainer} />
-              <Route path="/child" component={ChildContainer} />
+              <Route exact path="/child" component={ChildContainer} />
             </div>
           </Router>
       </div>    );
