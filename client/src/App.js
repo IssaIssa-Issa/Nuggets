@@ -10,7 +10,7 @@ import ManageFundsForm from './Components/Forms/ManageFundsForm'
 import ManageChoresForm from './Components/Forms/ManageChoresForm'
 import ManageChildForm from './Components/Forms/ManageChildForm'
 import Transactions from './Components/Containers/Transactions'
-// import Goals from './Components/Containers/Goals'
+import MyResponsiveBar from './Components/Containers/GoalChart'
 import EditGoals from './Components/Forms/EditGoals'
 import ViewAllChores from './Components/ViewAllChores'
 function App() {
@@ -27,7 +27,7 @@ function App() {
               <Route exact path="/managechoresform" component={ManageChoresForm} />
               <Route exact path="/managechildform" component={ManageChildForm} />
               <Route exact path="/transactions" component={Transactions} />
-              {/* <Route exact path="/Goals" component={Goals} /> */}
+              <Route exact path="/Goals" component={MyResponsiveBar} />
               <Route exact path="/editgoals" component={EditGoals} />
               <Route exact path="/viewallchores" component={ViewAllChores} />
 
