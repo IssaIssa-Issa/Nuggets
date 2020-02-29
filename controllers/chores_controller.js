@@ -37,13 +37,63 @@ module.exports = function (app) {
     });
 
 
-    // GET (show all login) KK: Not sure if this route is needed
+    // GET (show all login) 
     app.get("/api/login/", function (req, res) {
         db.sequelize.query('SELECT * FROM login')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
     });
+
+    // POST (add chore)
+    app.post("/api/chores", function (req, res) {
+        db.Chores.create({
+            //Add code here for team info req.body
+        })
+            .then(function (dbTeam) {
+                res.send(dbTeam);
+            });
+    });
+    //POST (add transaction)
+    app.post("/api/transaction", function (req, res) {
+        db.Transactions.create({
+            //Add code here for team info req.body
+        })
+            .then(function (dbTeam) {
+                res.send(dbTeam);
+            });
+    });
+
+    //POST (add parent)
+    app.post("/api/teams", function (req, res) {
+        db.Admin.create({
+            //Add code here for team info req.body
+        })
+            .then(function (dbTeam) {
+                res.send(dbTeam);
+            });
+    });
+
+    //POST(add child)
+    app.post("/api/teams", function (req, res) {
+        db.Children.create({
+            //Add code here for team info req.body
+        })
+            .then(function (dbTeam) {
+                res.send(dbTeam);
+            });
+    });
+
+    //POST(add login)
+    app.post("/api/teams", function (req, res) {
+        db.Login.create({
+            //Add code here for team info req.body
+        })
+            .then(function (dbTeam) {
+                res.send(dbTeam);
+            });
+    });
+
 
 
 
