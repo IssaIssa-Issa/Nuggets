@@ -12,9 +12,6 @@ const ParentContainer = () => {
                 <div className="col-md-3"></div>
 
                 <div className="col-md-2">
-                    <ManageChildBtn />
-                </div>
-                <div className="col-md-2">
                     <ManageFundsBtn />
                 </div>
                 <div className="col-md-2">
