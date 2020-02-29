@@ -14,13 +14,13 @@ import MyResponsiveBar from './Components/Containers/GoalChart'
 import EditGoals from './Components/Forms/EditGoals'
 import ViewAllChores from './Components/ViewAllChores'
 function App() {
-
         return (
           <div>
       <Header />
       <Router>
             <div>
               <Route exact path="/" component={login} />
+              <Route exact path='/callback' component={Callback} />
               <Route exact path="/parent" component={ParentContainer} />
               <Route exact path="/child" component={ChildContainer} />
               <Route exact path="/managefundsform" component={ManageFundsForm} />
@@ -30,12 +30,9 @@ function App() {
               <Route exact path="/Goals" component={MyResponsiveBar} />
               <Route exact path="/editgoals" component={EditGoals} />
               <Route exact path="/viewallchores" component={ViewAllChores} />
-
             </div>
           </Router>
       </div>    );
       }
-
-
-
 export default App;
+
