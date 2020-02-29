@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
 
 	// Creates a "Transactions" model that matches up with DB
 	var Transactions = sequelize.define("Transactions", {
-	"transaction_id": {
+	transaction_id: {
 			type: Sequelize.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
