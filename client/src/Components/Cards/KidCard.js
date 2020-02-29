@@ -12,6 +12,9 @@ const KidCard = () => {
     <h5 className="card-title child_Name">Ben</h5>
     <h4 className="card-text">Balance</h4>
     <h3 className="card-text child_balance">$10</h3>
+    <button type="button" class="btn btn-primary">View Transactions</button>
+    <button type="button" class="btn btn-primary">View Goals</button>
+
   </div>
 
 </div>

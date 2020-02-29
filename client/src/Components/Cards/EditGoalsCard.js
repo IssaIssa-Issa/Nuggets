@@ -6,8 +6,8 @@ const EditGoalsCard = () => {
       <div className="card" style={{width: "18rem"}}>
   <img src="..." className="card-img-top" alt="..."></img>
   <div className="card-body">
-    <h1 className="card-text">Edit Goals</h1>
-    <button type="button" class="btn btn-primary">Edit Goals</button>
+    <h1 className="card-text">Add Goal</h1>
+    <button type="button" class="btn btn-primary">Add Goal</button>
 
   </div>
 

@@ -22,6 +22,11 @@ const ManageFundsForm = () => {
             <br></br>
 
             <form>
+            <div className="form-group">
+                    <h3 for="exampleInputPassword1">Comment</h3>
+                    <input type="Amount" className="form-control" id="exampleInputAmount1"></input>
+                </div>
+
                 <div className="form-group">
                     <h3 for="exampleInputPassword1">Amount</h3>
                     <input type="Amount" className="form-control" id="exampleInputAmount1"></input>
