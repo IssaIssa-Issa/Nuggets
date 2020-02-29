@@ -2,6 +2,7 @@ var db = require("../models");
 
 module.exports = function (app) {
 
+///////////////////////////////////////////GET ROUTES////////////////////////////////////////////////
 
     // GET (show all transactions)
     app.get("/api/transaction/", function (req, res) {
@@ -45,56 +46,100 @@ module.exports = function (app) {
             })
     });
 
+
+///////////////////////////////////////////POST ROUTES////////////////////////////////////////////////
+
+
     // POST (add chore)
-    app.post("/api/chores", function (req, res) {
+    app.post("/api/chores/", function (req, res) {
         db.Chores.create({
-            //Add code here for team info req.body
+            admin_id: req.body.admin_id,
+            chore_name: req.body.chores_name,
+            completed_by_child_id: req.body.completed_by_child_id,
+            amount: req.body.amount,
         })
-            .then(function (dbTeam) {
-                res.send(dbTeam);
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
             });
     });
     //POST (add transaction)
-    app.post("/api/transaction", function (req, res) {
+    app.post("/api/transaction/", function (req, res) {
         db.Transactions.create({
-            //Add code here for team info req.body
+            amount: req.body.amount,
+            admin_id: req.body.admin_id,
+            child_id: req.body.child_id,
+            admin_notes: req.body.admin_notes,
         })
-            .then(function (dbTeam) {
-                res.send(dbTeam);
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
             });
     });
 
     //POST (add parent)
-    app.post("/api/teams", function (req, res) {
+    app.post("/api/admin/", function (req, res) {
         db.Admin.create({
-            //Add code here for team info req.body
+            admin_name: req.body.admin_name
         })
-            .then(function (dbTeam) {
-                res.send(dbTeam);
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
             });
     });
 
     //POST(add child)
-    app.post("/api/teams", function (req, res) {
+    app.post("/api/children/", function (req, res) {
         db.Children.create({
-            //Add code here for team info req.body
+            child_name: req.body.child_name,
+            admin_id: req.body.admin_id,
         })
-            .then(function (dbTeam) {
-                res.send(dbTeam);
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
             });
     });
 
     //POST(add login)
-    app.post("/api/teams", function (req, res) {
+    app.post("/api/login/", function (req, res) {
         db.Login.create({
-            //Add code here for team info req.body
+            username: req.body.username,
+            password: req.body.password
         })
-            .then(function (dbTeam) {
-                res.send(dbTeam);
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
             });
     });
 
+///////////////////////////////////////////UPDATE ROUTES////////////////////////////////////////////////
+
+    // UPDATE (update chore)
+    app.update("/api/chores/:id", function (req, res) {
+        db.Teambuilder.update({
+            date_approved: NOW(),
+            date_completed: NOW(), 
+            admin_comments: req.body.admin_comments,
+            child_comments: req.body.child_comments
+        },{
+          where: {
+            id: req.params.id
+          }
+        })
+          .then(function (dbNuggets) {
+            res.json(dbNuggets);
+          })
+      });
 
 
+
+///////////////////////////////////////////DELETE ROUTES////////////////////////////////////////////////
+
+// DELETE (delete chore)
+app.delete("/api/chores/:id", function (req, res) {
+    db.Teambuilder.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (dbNuggets) {
+        res.json(dbNuggets);
+      })
+  });
 
 }
