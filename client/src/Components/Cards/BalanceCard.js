@@ -8,6 +8,8 @@ const BalanceCard = () => {
   <div className="card-body">
     <h4 className="card-text">Balance</h4>
     <h3 className="card-text child_balance">$10</h3>
+    <button type="button" class="btn btn-primary">See Transactions</button>
+
   </div>
 
 </div>

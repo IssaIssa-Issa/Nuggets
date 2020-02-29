@@ -1,14 +1,13 @@
 import React from 'react'
 
-const GoalCard = () => {
+const EditGoalsCard = () => {
     return(
     
       <div className="card" style={{width: "18rem"}}>
   <img src="..." className="card-img-top" alt="..."></img>
   <div className="card-body">
-    <h4 className="card-text">Goals</h4>
-    <h3 className="card-text child_balance">New Car</h3>
-    <button type="button" class="btn btn-primary">See Goals</button>
+    <h1 className="card-text">Edit Goals</h1>
+    <button type="button" class="btn btn-primary">Edit Goals</button>
 
   </div>
 
@@ -17,4 +16,4 @@ const GoalCard = () => {
     )
 }
 
-export default GoalCard
+export default EditGoalsCard

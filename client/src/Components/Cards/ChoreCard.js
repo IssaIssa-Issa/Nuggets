@@ -7,6 +7,8 @@ const ChoreCard = () => {
   <img src="..." className="card-img-top" alt="..."></img>
   <div className="card-body">
     <h1 className="card-text">Chores</h1>
+    <button type="button" class="btn btn-primary">See Chores</button>
+
   </div>
 
 </div>
