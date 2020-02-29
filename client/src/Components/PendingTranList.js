@@ -30,7 +30,7 @@ const PendingTranList = () => {
               <td>2</td>
               <td>3/2/2020</td>
               <td>Ben</td>
-              <td>Take our Trash</td>
+              <td>Take out Trash</td>
               <td>$2.00</td>
               <td>Pending</td>
               <td scope="col"><button type="button" className="btn btn-success">Approve</button></td>
