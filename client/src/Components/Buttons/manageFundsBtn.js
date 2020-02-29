@@ -2,15 +2,14 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 
 const ManageFundsBtn = () => {
-
-    routeChange=()=> {
-        let path = `/managefundsform`;
-        let history = useHistory();
-        history.push(path);
-      }
-
+        const history = useHistory();
+      
+        function handleClick() {
+          history.push("/managefundsform");
+        }
+      
     return(
-<button type="button" onClick={this.routeChange} class="btn btn-primary">Manage Funds</button>
+<button type="button" onClick={handleClick} class="btn btn-primary">Manage Funds</button>
 
 
     )};

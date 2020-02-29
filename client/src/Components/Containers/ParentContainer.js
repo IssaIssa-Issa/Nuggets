@@ -1,7 +1,6 @@
 import React from 'react'
 import KidCard from '../Cards/KidCard'
 import PendingTranList from '../PendingTranList'
-import ManageChildBtn from '../Buttons/manageChildBtn'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
 import ManageChoresBtn from '../Buttons/manageChoresBtn'
 
