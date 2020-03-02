@@ -2,11 +2,10 @@ import React from 'react'
 
 const Header = () => {
     return (
-<div className="jumbotron">
+<div className="jumbotron" style={{background: "#149A21", fontFamily: 'Fjalla One'}}>
 
-
-  <h1 className="display-4">Welcome to Nuggets</h1>
-  <p className="lead">This is a simple tool to help parents track chores and allowances</p>
+<p className="lead">earn.save.spend</p>
+  <h1 className="display-4">nuggets</h1>
   <hr className="my-4"></hr>
 
 
