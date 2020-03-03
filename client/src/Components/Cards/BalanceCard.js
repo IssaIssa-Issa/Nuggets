@@ -1,6 +1,17 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
+
 
 const BalanceCard = () => {
+
+        const history = useHistory();
+      
+        function handleClick() {
+          history.push("/transactions");
+        }
+      
+  
+
     return(
     
       <div className="card" style={{width: "18rem"}}>
@@ -8,7 +19,7 @@ const BalanceCard = () => {
   <div className="card-body">
     <h4 className="card-text">Balance</h4>
     <h3 className="card-text child_balance">$10</h3>
-    <button type="button" class="btn btn-primary">See Transactions</button>
+    <button type="button" onClick={handleClick} class="btn btn-primary">See Transactions</button>
 
   </div>
 

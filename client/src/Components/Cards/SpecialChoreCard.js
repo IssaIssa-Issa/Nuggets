@@ -1,6 +1,10 @@
 import React from 'react'
 
 const SpecialChoreCard = () => {
+
+
+
+  
     return(
     
       <div class="jumbotron jumbotron-fluid">
