@@ -9,7 +9,7 @@ import "./style.css"
 
 const ChildContainer = () => {
 return(
-<div className="rectangle">
+    <div className="rectangle">
     <SpecialChoreCard />
     <div className="row">
     <div className="col-md-6">
@@ -26,8 +26,8 @@ return(
     <div className="col-md-6">
      <EditGoalsCard />
     </div>
-    </div>
 
+</div>
 </div>
 )
 
