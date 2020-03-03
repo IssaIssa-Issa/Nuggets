@@ -2,7 +2,17 @@ import React from 'react'
 
 const ManageFundsForm = () => {
     return (
+        <>
         <div>
+                        <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+  <a className="navbar-brand" href="#" style={{color:"white"}}>
+    <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""></img>
+    Chore Enforement Officer
+  </a>
+</nav>
+<br></br>
+            <br></br>
+
                   <div class="col-md-6 offset-md-3">
 
             <h3>Add or Remove Funds</h3>
@@ -33,8 +43,17 @@ const ManageFundsForm = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
+            
         </div>
+        
         </div>
+                        <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+                        <a className="navbar-brand" href="#">
+                          <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+                        </a>
+                      </nav>
+                      </>
+                      
     )
 };
 

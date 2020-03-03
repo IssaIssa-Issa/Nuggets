@@ -3,7 +3,17 @@ import React from 'react'
 const ManageChoresForm = () => {
     return (
         <>
+  <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+  <a className="navbar-brand" href="#" style={{color:"white"}}>
+    <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""></img>
+    Chore Enforement Officer
+  </a>
+</nav>
+
         <div class="col-md-8 offset-md-2">
+        <br></br>
+            <br></br>
+
           <table className="table">
             <thead>
               <tr>
@@ -52,6 +62,12 @@ const ManageChoresForm = () => {
                 <button type="submit" className="btn btn-primary">Submit</button>
                 </div>
             </form>
+            <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+  <a className="navbar-brand" href="#">
+    <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+  </a>
+</nav>
+
         </>
     )
 };

@@ -11,7 +11,7 @@ const ManageChoresBtn = () => {
       
     return(
         
-<button type="button" onClick={handleClick} class="btn btn-primary">Manage Chores</button>
+<button type="button" onClick={handleClick} class="btn btn-success" style={{backgroundColor:"149A21"}}>Manage Chores</button>
 
 
     )};

@@ -5,10 +5,11 @@ import GoalCard from '../Cards/GoalCard'
 import ChoreCard from '../Cards/ChoreCard'
 import SpecialChoreCard from '../Cards/SpecialChoreCard'
 import EditGoalsCard from '../Cards/EditGoalsCard'
+import "./style.css"
 
 const ChildContainer = () => {
 return(
-<div>
+<div className="rectangle">
     <SpecialChoreCard />
     <div className="row">
     <div className="col-md-6">

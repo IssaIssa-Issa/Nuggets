@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Header from './Components/Containers/Header'
+import Header from './Components/Header/Header'
 import login from './Components/Containers/login'
 import ParentContainer from './Components/Containers/ParentContainer';
 import ChildContainer from './Components/Containers/ChildContainer';
@@ -13,12 +13,11 @@ import Transactions from './Components/Containers/Transactions'
 import MyResponsiveBar from './Components/Containers/GoalChart'
 import EditGoals from './Components/Forms/EditGoals'
 import ViewAllChores from './Components/ViewAllChores'
+
 function App() {
         return (
           <div>
-      <Header />
       <Router>
-            <div>
               <Route exact path="/" component={login} />
               <Route exact path='/callback' component={Callback} />
               <Route exact path="/parent" component={ParentContainer} />
@@ -30,7 +29,6 @@ function App() {
               <Route exact path="/Goals" component={MyResponsiveBar} />
               <Route exact path="/editgoals" component={EditGoals} />
               <Route exact path="/viewallchores" component={ViewAllChores} />
-            </div>
           </Router>
       </div>    );
       }

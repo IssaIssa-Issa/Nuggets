@@ -2,6 +2,16 @@ import React from 'react'
 
 const ManageChildForm = () => {
     return (
+        <>
+        <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+        <a className="navbar-brand" href="#" style={{color:"white"}}>
+          <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""></img>
+          Chore Enforement Officer
+        </a>
+      </nav>
+      <br></br>
+            <br></br>
+
             <form>
                   <div class="col-md-6 offset-md-3">
 
@@ -22,7 +32,13 @@ const ManageChildForm = () => {
             <br></br>
                             </div>
             </form>
-    
+            <nav className="navbar" style={{backgroundColor:"#20638C"}}>
+  <a className="navbar-brand" href="#">
+    <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+  </a>
+</nav>
+
+    </>
         
     )
 };

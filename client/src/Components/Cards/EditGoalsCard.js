@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
+import "../Containers/style.css"
 
 const EditGoalsCard = () => {
 
@@ -13,7 +14,7 @@ const EditGoalsCard = () => {
 
     return(
     
-      <div className="card" style={{width: "18rem"}}>
+      <div className="card elipse6" style={{width: "18rem"}}>
   <img src="..." className="card-img-top" alt="..."></img>
   <div className="card-body">
     <h1 className="card-text">Add Goal</h1>

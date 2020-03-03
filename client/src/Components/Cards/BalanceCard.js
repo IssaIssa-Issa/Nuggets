@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-
+import "../Containers/style.css"
 
 const BalanceCard = () => {
 
@@ -14,7 +14,7 @@ const BalanceCard = () => {
 
     return(
     
-      <div className="card" style={{width: "18rem"}}>
+      <div className="card elipse7" style={{width: "18rem"}}>
   <img src="..." className="card-img-top" alt="..."></img>
   <div className="card-body">
     <h4 className="card-text">Balance</h4>
