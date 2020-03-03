@@ -3,19 +3,18 @@ module.exports = function (sequelize, DataTypes) {
 	// Creates a "Chores" model that matches up with DB
 	var Chores = sequelize.define("Chores", {
 		chores_id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		  },
-		admin_id: Sequelize.INTEGER,
-		chore_name: Sequlize.STRING,
-		date_created: Sequelize.DATEONLY,
-		date_approved: Sequelize.DATEONLY,
-		date_completed: Sequelize.DATEONLY,
-		completed_by_child_id: Sequelize.INTEGER,
-		amount: Sequelize.DECIMAL,
-		child_comments: Sequelize.STRING,
-		admin_comments: Sequelize.STRING
+		admin_id: DataTypes.INTEGER,
+		chore_name: DataTypes.STRING,
+		date_approved: DataTypes.DATE,
+		date_completed: DataTypes.DATE,
+		completed_by_child_id: DataTypes.INTEGER,
+		amount: DataTypes.DECIMAL,
+		child_comments: DataTypes.STRING,
+		admin_comments: DataTypes.STRING
 	},
 	{
 	  tableName: "chores"

@@ -3,16 +3,14 @@ module.exports = function (sequelize, DataTypes) {
 	// Creates a "Transactions" model that matches up with DB
 	var Transactions = sequelize.define("Transactions", {
 	transaction_id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		  },
-        amount: Sequelize.DECIMAL,
-        admin_id: Sequelize.INTEGER,
-        child_id: Sequelize.INTEGER,
-		admin_notes: Sequelize.STRING,
-		date_created: Sequelize.DATEONLY
-	},
+        amount: DataTypes.DECIMAL,
+        admin_id: DataTypes.INTEGER,
+        child_id: DataTypes.INTEGER,
+		admin_notes: DataTypes.STRING},
 	{
 	  tableName: "transactions"
 	}

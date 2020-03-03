@@ -1,17 +1,16 @@
-module.exports = function (goals, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
 
 	// Creates a "Transactions" model that matches up with DB
 	var Goals = sequelize.define("Goals", {
 	goal_id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		  },
-        goal_amount: Sequelize.DECIMAL,
-        child_id: Sequelize.INTEGER,
-		date_created: Sequelize.DATEONLY,
-		goal_color: Sequelize.STRING,
-		goal_name: Sequelize.Goals
+        goal_amount: DataTypes.DECIMAL,
+        child_id: DataTypes.INTEGER,
+		goal_color: DataTypes.STRING,
+		goal_name: DataTypes.STRING
 	},
 	{
 	  tableName: "goals"

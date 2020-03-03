@@ -3,11 +3,11 @@ module.exports = function (sequelize, DataTypes) {
 	// Creates a "Admin" model that matches up with DB
 	var Admin = sequelize.define("Admin", {
 		admin_id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		  },
-		admin_name: Sequlize.STRING,
+		admin_name: DataTypes.STRING,
 	},
 	{
 	  tableName: "admin"

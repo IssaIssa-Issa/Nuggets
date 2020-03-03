@@ -3,14 +3,14 @@ module.exports = function (sequelize, DataTypes) {
 	// Creates a "Login" model that matches up with DB
 	var Login = sequelize.define("Login", {
 		login_id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		  },
-        username: Sequlize.STRING,
-        password: Sequelize.STRING,
-        admin_id: Sequelize.INTEGER,
-        child_id: Sequelize.INTEGER
+        username: DataTypes.STRING,
+        password: DataTypes.STRING,
+        admin_id: DataTypes.INTEGER,
+        child_id: DataTypes.INTEGER
 	},
 	{
 	  tableName: "login"

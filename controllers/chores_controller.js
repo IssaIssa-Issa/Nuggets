@@ -110,7 +110,7 @@ module.exports = function (app) {
 ///////////////////////////////////////////UPDATE ROUTES////////////////////////////////////////////////
 
     // UPDATE (update chore)
-    app.update("/api/chores/:id", function (req, res) {
+    app.put("/api/chores/:id", function (req, res) {
         db.Teambuilder.update({
             date_approved: NOW(),
             date_completed: NOW(), 
