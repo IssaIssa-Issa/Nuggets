@@ -30,7 +30,6 @@ AS A child, I WANT an application that lets me pick chores I want to do and adds
 
 * React.js
 * Node.js
-* Express.js
 * mySQL database
 * Javascript
 * HTML5
