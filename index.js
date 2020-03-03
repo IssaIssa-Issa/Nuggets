@@ -1,21 +1,21 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const routes = require('./routes/api');
-const path = require('path');
-
-require('dotenv').config();
-
 const app = express();
 const port = process.env.PORT || 3001;
 
-mongoose.connect(process.env.DB,
-{ useNewUrlParser: true, useUnifiedTopology: true })
-	.then(() => console.log('Database connected successfully'))
-	.catch(err => console.log(err)
-);
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
+
+// sequilize
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    })
+});
+
+require('dotenv').config();
 app.use(logger('dev'));
 
 app.use(bodyParser.json());
@@ -27,4 +27,5 @@ app.use((err, req, res, next) => {
     next();
 });
 
-app.listen(port, () => { console.log('Server running on port ' + port) });
+// Import routes and give the server access to them.
+require("./controllers/chores_controller")(app);

@@ -18,6 +18,6 @@ module.exports = function (sequelize, DataTypes) {
 	}
 	);
   
-	// Makes the Children model available for other files (will also create a table)
+	// Makes the transactions model available for other files (will also create a table)
 	return Transactions;
   }
