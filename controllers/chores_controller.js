@@ -54,8 +54,7 @@ module.exports = function (app) {
     app.post("/api/chores/", function (req, res) {
         db.Chores.create({
             admin_id: req.body.admin_id,
-            chore_name: req.body.chores_name,
-            completed_by_child_id: req.body.completed_by_child_id,
+            chore_name: req.body.chore_name,
             amount: req.body.amount,
         })
             .then(function (dbNuggets) {
