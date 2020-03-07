@@ -10,7 +10,8 @@ module.exports = function (sequelize, DataTypes) {
         amount: DataTypes.DECIMAL,
         admin_id: DataTypes.INTEGER,
         child_id: DataTypes.INTEGER,
-		admin_notes: DataTypes.STRING},
+		admin_notes: DataTypes.STRING
+	},
 	{
 	  tableName: "transactions"
 	}

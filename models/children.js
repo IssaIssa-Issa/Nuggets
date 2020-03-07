@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
 		  },
         child_name: DataTypes.STRING,
         admin_id: DataTypes.INTEGER,
-        balance: DataTypes.DECIMAL
+		balance: DataTypes.DECIMAL
 	},
 	{
 	  tableName: "children"

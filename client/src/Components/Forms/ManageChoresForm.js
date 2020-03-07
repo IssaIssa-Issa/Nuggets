@@ -1,26 +1,60 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import axios from 'axios'
+import { List, ListItem } from "../List";
+import DeleteBtn from "../DeleteBtn";
 
 const ManageChoresForm = () => {
-const [chore , setChore] = React.useState()
-const [amount , setAmount] = React.useState()
+// const [chore , setChore] = React.useState([])
+// const [amount , setAmount] = React.useState()
+
+const [chores, setChores] = useState()
+const [amount , setAmount] = useState()
+const [choresArray , setChoresArray] = useState([])
+
+const [formObject, setFormObject] = useState({})
+
+
+  // Load all chores and store them with setChore
+  useEffect(() => {
+    loadChores()
+  }, [])
+
+  // Loads all chores and sets them to chores
+  function loadChores() {
+    axios.get("/api/chores/")
+      .then(res =>
+        setChoresArray(res.data),
+      )
+      .catch(err => console.log(err));
+  };
+
+  // Deletes a book from the database with a given id, then reloads chores from the db
+  function deleteChore(chore_id) {
+
+  }
+
+  // function handleInputChange(event) {
+  //   const { name, value } = event.target;
+  //   setFormObject({ ...formObject, [name]: value })
+  // };
+
+  
+
+
 
 function addChore(event) {
     // event.preventDefault();
 
     // Send the GET request.
     var newChore = {
-      chore_name: chore,
+      chore_name: chores,
       amount: amount,
       admin_id: 1,
-
     };
+
 console.log(newChore)
-    axios.post("/api/chores/", {
-      type: "POST",
-      data: newChore,
-      url: "/api/chores/"
-    }).then(
+
+    axios.post("/api/chores/", newChore).then(
       function () {
         console.log("This is the result", newChore)
       })
@@ -38,6 +72,35 @@ console.log(newChore)
         <div className="col-md-8 offset-md-2">
           <br></br>
           <br></br>
+
+
+         
+
+          {choresArray.length ? (
+            <List>
+                {choresArray.map(chore => {
+                  return (
+                    <ListItem key={chore.chores_id}>
+
+                        <strong>
+                          {chore.chore_name} Amount: {chore.amount}
+                        </strong>
+  
+                      <DeleteBtn onClick={() => deleteChore(chore.chores_id)} />
+                    </ListItem>
+                  );
+                })}
+            </List>
+          ) : (
+              <h3>No Results to Display</h3>
+            )}
+    
+
+
+
+
+
+
 
           <table className="table">
             <thead>
@@ -59,8 +122,8 @@ console.log(newChore)
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
               <tr>
-                <td>{chore}</td>
-                <td>{amount}</td>
+                {/* <td>{chore}</td>
+                <td>{amount}</td> */}
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
             </tbody>
@@ -75,13 +138,13 @@ console.log(newChore)
             <h3>Add Chores</h3>
             <div className="form-group">
               <h3>Chore Name</h3>
-              <input type="Name" onChange={e => setChore(e.target.value)} className="form-control" id="choreName"></input>
+              <input type="Name" className="form-control" onChange={e => setChores(e.target.value)} id="choreName"></input>
             </div>
             <br></br>
             <br></br>
             <div className="form-group">
               <h3>Amount</h3>
-              <input type="Amount" onChange={e => setAmount(e.target.value)}className="form-control" id="ChoreAmount"></input>
+              <input type="Amount" className="form-control" onChange={e => setAmount(e.target.value)}  id="choreAmount"></input>
             </div>
             <button type="submit" onClick={addChore} className="btn btn-primary">Submit</button>
           </div>

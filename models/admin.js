@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
 			primaryKey: true,
 			autoIncrement: true
 		  },
-		admin_name: DataTypes.STRING,
+		admin_name: DataTypes.STRING
 	},
 	{
 	  tableName: "admin"

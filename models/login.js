@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
         username: DataTypes.STRING,
         password: DataTypes.STRING,
         admin_id: DataTypes.INTEGER,
-        child_id: DataTypes.INTEGER
+		child_id: DataTypes.INTEGER
 	},
 	{
 	  tableName: "login"

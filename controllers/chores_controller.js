@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require("../models/index");
 const router = require("express").Router()
 
 
@@ -7,7 +7,7 @@ const router = require("express").Router()
 
     // GET (show all transactions)
     router.route("/api/transaction/").get( function (req, res) {
-        db.sequelize.query('SELECT * FROM transaction')
+        db.Transaction.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -16,7 +16,7 @@ const router = require("express").Router()
 
     // GET (show all chores)
     router.route("/api/chores").get(function (req, res) {
-        db.sequelize.query('SELECT * FROM chores')
+        db.Chores.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -24,7 +24,7 @@ const router = require("express").Router()
 
     // GET (show all children)
     router.route("/api/children/").get(function (req, res) {
-        db.sequelize.query('SELECT * FROM children')
+        db.Children.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -32,7 +32,7 @@ const router = require("express").Router()
 
     // GET (show all admin)
     router.route("/api/admin/").get(function (req, res) {
-        db.sequelize.query('SELECT * FROM admin')
+        db.Admin.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -41,7 +41,7 @@ const router = require("express").Router()
 
     // GET (show all login) 
     router.route("/api/login/").get(function (req, res) {
-        db.sequelize.query('SELECT * FROM login')
+        db.Login.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -111,7 +111,7 @@ const router = require("express").Router()
 
     // UPDATE (update chore)
     router.route("/api/chores/:id").put(function (req, res) {
-        db.Teambuilder.update({
+        db.Chores.update({
             date_approved: NOW(),
             date_completed: NOW(), 
             admin_comments: req.body.admin_comments,
@@ -132,11 +132,18 @@ const router = require("express").Router()
 
 // DELETE (delete chore)
 router.route("/api/chores/:id").delete(function (req, res) {
-    db.Teambuilder.destroy({
+    db.Chores.destroy({
       where: {
         id: req.params.id
       }
     })
+      .then(function (dbNuggets) {
+        res.json(dbNuggets);
+      })
+  });
+
+  router.route("/api/chores").delete(function (req, res) {
+    db.Chores.destroy()
       .then(function (dbNuggets) {
         res.json(dbNuggets);
       })
