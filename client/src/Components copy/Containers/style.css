@@ -1,0 +1,142 @@
+/* Rectangle 31 */
+
+.rectangle{
+/* position: absolute;
+width: 375px;
+height: 812px;
+left: 0px;
+top: 0px; */
+
+background-color: #149A21;
+}
+
+/* Ellipse 5 */
+
+.elipse5{
+position: absolute;
+width: 211px;
+height: 211px;
+left: 164px;
+top: 195px;
+border-radius: 50%;
+
+
+background: #F6FA3C;
+}
+
+/* Ellipse 8 */
+
+.elipse8{
+position: absolute;
+width: 233px;
+height: 233px;
+left: 0px;
+top: 389px;
+border-radius: 50%;
+
+
+background: #D93441;
+}
+
+/* Ellipse 7 */
+
+.elipse7{
+position: absolute;
+width: 233px;
+height: 233px;
+left: -15px;
+top: -22px;
+border-radius: 50%;
+
+
+background: #20638C;
+}
+
+/* Ellipse 6 */
+
+.elipse6{
+position: absolute;
+width: 233px;
+height: 233px;
+left: 81px;
+top: 639px;
+border-radius: 50%;
+
+
+background: #E37C2B;
+}
+
+/* Balance */
+
+.balance{
+position: absolute;
+width: 122px;
+height: 50px;
+left: 41px;
+top: 70px;
+
+font-family: Fjalla One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 50px;
+
+color: #FFFFFF;
+}
+
+
+/* Goals */
+
+.goals{
+position: absolute;
+width: 84px;
+height: 50px;
+left: 228px;
+top: 267px;
+
+font-family: Fjalla One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 50px;
+
+color: #FFFFFF;
+}
+
+
+/* Jobs */
+
+.jobs{
+position: absolute;
+width: 71px;
+height: 50px;
+left: 81px;
+top: 481px;
+
+font-family: Fjalla One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 50px;
+
+color: #FFFFFF;
+
+}
+
+/* Alerts */
+
+.alert{
+position: absolute;
+width: 92px;
+height: 50px;
+left: 144px;
+top: 731px;
+
+font-family: Fjalla One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 50px;
+
+color: #FFFFFF;
+}

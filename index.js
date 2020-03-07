@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 var db = require ("./models");
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -19,6 +19,11 @@ app.use((err, req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
+});
+
 
 // Import routes and give the server access to them.
 require("./controllers/chores_controller")(app);

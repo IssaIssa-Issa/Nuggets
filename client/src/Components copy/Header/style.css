@@ -1,0 +1,113 @@
+/* Rectangle 23 */
+
+.rectangle{
+position: absolute;
+width: 375px;
+height: 812px;
+left: 0px;
+top: 375px;
+
+background: radial-gradient(100.68% 53.69% at 50% 50%, #F6FA3C 12.14%, #149A21 100%);
+transform: rotate(-89.83deg);
+}
+
+/* Ellipse 1 */
+
+.elipse1{
+position: absolute;
+width: 237px;
+height: 237px;
+left: 598.5px;
+top: 210.82px;
+border-radius: 50%;
+
+background: linear-gradient(338.59deg, #20628C 27.2%, #F6FA3C 116.37%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(-89.83deg);
+}
+
+/* Ellipse 3 */
+
+.elipse3{
+position: absolute;
+width: 131px;
+height: 131px;
+left: 31.74px;
+top: 131.09px;
+border-radius: 50%;
+
+background: linear-gradient(211.03deg, #D93441 38.65%, #F6FA3C 121.74%);
+box-shadow: 3px -2px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(-89.83deg);
+}
+
+/* Ellipse 2 */
+
+.elipse2{
+position: absolute;
+width: 211.44px;
+height: 211.44px;
+left: 295.25px;
+top: 291.96px;
+border-radius: 50%;
+
+background: #F6FA3C;
+transform: rotate(-87.13deg);
+
+}
+/* earn.save.spend */
+
+.tagLine{
+position: absolute;
+width: 157px;
+height: 28px;
+left: 305.32px;
+top: 134.48px;
+
+font-family: Futura;
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: #000000;
+
+transform: rotate(-0.18deg);
+}
+
+/* nuggets */
+
+.nuggets{
+position: absolute;
+width: 202px;
+height: 80px;
+left: 305.43px;
+top: 148.58px;
+
+font-family: Fjalla One;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 80px;
+
+color: #000000;
+
+transform: rotate(-0.2deg);
+}
+
+/* Ellipse 4 */
+
+.elipse4{
+position: absolute;
+width: 75px;
+height: 75px;
+left: 173.16px;
+top: 323.53px;
+border-radius: 50%;
+
+background: linear-gradient(147.91deg, #E37C2B 30.72%, #F6FA3C 131.76%);
+box-shadow: -2px -3px 4px rgba(0, 0, 0, 0.25);
+transform: rotate(-89.83deg);
+}
