@@ -18,9 +18,9 @@ const KidCard = () => {
 
     return(
     
-      <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <div className="row">
+      {/* <div class="col-md-4"></div> */}
+      <div className="col-md-6">
       <div className="card" style={{width: "18rem"}}>
   <img src="images/computer.png" className="card-img-top" alt="computer"></img>
   <div className="card-body">
@@ -30,7 +30,9 @@ const KidCard = () => {
     <button type="button" onClick={handleClick1} class="btn btn-primary">View Transactions</button>
     {/* <button type="button" onClick={handleClick2} class="btn btn-primary">View Goals</button> */}
     </div>
-
+    </div>
+    </div>
+    <div className="col-md-6">
     <div className="card" style={{width: "18rem"}}>
   <img src="images/plane.png" className="card-img-top" alt="planes"></img>
     <div className="card-body">
@@ -41,12 +43,9 @@ const KidCard = () => {
     {/* <button type="button" onClick={handleClick2} class="btn btn-primary">View Goals</button> */}
 
   </div>
-
+  </div>
 </div>
 
-</div>
-<div class="col-md-4"></div>
-</div>
 </div>
     )
 }

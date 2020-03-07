@@ -9,7 +9,7 @@ const ManageFundsBtn = () => {
         }
       
     return(
-<button type="button" onClick={handleClick} class="btn btn-success">Manage Funds</button>
+<button type="button" onClick={handleClick} className="btn btn-success">Manage Funds</button>
 
 
     )};
