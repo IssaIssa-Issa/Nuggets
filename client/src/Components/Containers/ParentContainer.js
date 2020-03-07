@@ -2,7 +2,7 @@ import React from 'react'
 import KidCard from '../Cards/KidCard'
 import PendingTranList from '../PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
-import ManageChoresBtn from '../Buttons/manageChoresBtn'
+// import ManageChoresBtn from '../Buttons/manageChoresBtn'
 
 const ParentContainer = () => {
     return (

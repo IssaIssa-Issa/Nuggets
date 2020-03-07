@@ -22,7 +22,7 @@ const KidCard = () => {
       <div class="col-md-4"></div>
       <div class="col-md-4">
       <div className="card" style={{width: "18rem"}}>
-  <img src="..." className="card-img-top" alt="..."></img>
+  <img src="images/computer.png" className="card-img-top" alt="computer"></img>
   <div className="card-body">
     <h5 className="card-title child_Name">Ben</h5>
     <h4 className="card-text">Balance</h4>
@@ -32,7 +32,7 @@ const KidCard = () => {
     </div>
 
     <div className="card" style={{width: "18rem"}}>
-  <img src="..." className="card-img-top" alt="..."></img>
+  <img src="images/plane.png" className="card-img-top" alt="planes"></img>
     <div className="card-body">
     <h5 className="card-title child_Name">Jack</h5>
     <h4 className="card-text">Balance</h4>
