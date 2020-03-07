@@ -2,18 +2,20 @@ import React from 'react'
 import axios from 'axios'
 
 const ManageChoresForm = () => {
+const [chore , setChore] = React.useState()
+const [amount , setAmount] = React.useState()
 
-  function addChore(event) {
+function addChore(event) {
     // event.preventDefault();
 
     // Send the GET request.
     var newChore = {
-      chore_name: document.getElementById("choreName"),
-      amount: document.getElementById("choreAmount"),
+      chore_name: chore,
+      amount: amount,
       admin_id: 1,
 
     };
-
+console.log(newChore)
     axios.post("/api/chores/", {
       type: "POST",
       data: newChore,
@@ -22,7 +24,6 @@ const ManageChoresForm = () => {
       function () {
         console.log("This is the result", newChore)
       })
-
     }
 
     return (
@@ -55,12 +56,11 @@ const ManageChoresForm = () => {
               <tr>
                 <td>Take out Trash</td>
                 <td>$2.00</td>
-                <td className="form-group"></td>
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
               <tr>
-                <td>Vacuum</td>
-                <td>$1.00</td>
+                <td>{chore}</td>
+                <td>{amount}</td>
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
             </tbody>
@@ -74,14 +74,14 @@ const ManageChoresForm = () => {
 
             <h3>Add Chores</h3>
             <div className="form-group">
-              <h3 for="exampleInputPassword1">Chore Name</h3>
-              <input type="Name" className="form-control" id="choreName"></input>
+              <h3>Chore Name</h3>
+              <input type="Name" onChange={e => setChore(e.target.value)} className="form-control" id="choreName"></input>
             </div>
             <br></br>
             <br></br>
             <div className="form-group">
-              <h3 for="exampleInputPassword1">Amount</h3>
-              <input type="Amount" className="form-control" id="ChoreAmount"></input>
+              <h3>Amount</h3>
+              <input type="Amount" onChange={e => setAmount(e.target.value)}className="form-control" id="ChoreAmount"></input>
             </div>
             <button type="submit" onClick={addChore} className="btn btn-primary">Submit</button>
           </div>
