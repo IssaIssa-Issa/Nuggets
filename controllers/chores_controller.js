@@ -1,11 +1,12 @@
 var db = require("../models");
+const router = require("express").Router()
 
-module.exports = function (app) {
+
 
 ///////////////////////////////////////////GET ROUTES////////////////////////////////////////////////
 
     // GET (show all transactions)
-    app.get("/api/transaction/", function (req, res) {
+    router.route("/api/transaction/").get( function (req, res) {
         db.sequelize.query('SELECT * FROM transaction')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
@@ -14,7 +15,7 @@ module.exports = function (app) {
 
 
     // GET (show all chores)
-    app.get("/api/chores/", function (req, res) {
+    router.route("/api/chores").get(function (req, res) {
         db.sequelize.query('SELECT * FROM chores')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
@@ -22,7 +23,7 @@ module.exports = function (app) {
     });
 
     // GET (show all children)
-    app.get("/api/children/", function (req, res) {
+    router.route("/api/children/").get(function (req, res) {
         db.sequelize.query('SELECT * FROM children')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
@@ -30,7 +31,7 @@ module.exports = function (app) {
     });
 
     // GET (show all admin)
-    app.get("/api/admin/", function (req, res) {
+    router.route("/api/admin/").get(function (req, res) {
         db.sequelize.query('SELECT * FROM admin')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
@@ -39,7 +40,7 @@ module.exports = function (app) {
 
 
     // GET (show all login) 
-    app.get("/api/login/", function (req, res) {
+    router.route("/api/login/").get(function (req, res) {
         db.sequelize.query('SELECT * FROM login')
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
@@ -51,7 +52,7 @@ module.exports = function (app) {
 
 
     // POST (add chore)
-    app.post("/api/chores/", function (req, res) {
+    router.route("/api/chores/").post(function (req, res) {
         db.Chores.create({
             admin_id: req.body.admin_id,
             chore_name: req.body.chore_name,
@@ -62,7 +63,7 @@ module.exports = function (app) {
             });
     });
     //POST (add transaction)
-    app.post("/api/transaction/", function (req, res) {
+    router.route("/api/transaction/").post(function (req, res) {
         db.Transactions.create({
             amount: req.body.amount,
             admin_id: req.body.admin_id,
@@ -75,7 +76,7 @@ module.exports = function (app) {
     });
 
     //POST (add parent)
-    app.post("/api/admin/", function (req, res) {
+    router.route("/api/admin/").post(function (req, res) {
         db.Admin.create({
             admin_name: req.body.admin_name
         })
@@ -85,7 +86,7 @@ module.exports = function (app) {
     });
 
     //POST(add child)
-    app.post("/api/children/", function (req, res) {
+    router.route("/api/children/").post(function (req, res) {
         db.Children.create({
             child_name: req.body.child_name,
             admin_id: req.body.admin_id,
@@ -96,7 +97,7 @@ module.exports = function (app) {
     });
 
     //POST(add login)
-    app.post("/api/login/", function (req, res) {
+    router.route("/api/login").post(function (req, res) {
         db.Login.create({
             username: req.body.username,
             password: req.body.password
@@ -109,7 +110,7 @@ module.exports = function (app) {
 ///////////////////////////////////////////UPDATE ROUTES////////////////////////////////////////////////
 
     // UPDATE (update chore)
-    app.put("/api/chores/:id", function (req, res) {
+    router.route("/api/chores/:id").put(function (req, res) {
         db.Teambuilder.update({
             date_approved: NOW(),
             date_completed: NOW(), 
@@ -130,7 +131,7 @@ module.exports = function (app) {
 ///////////////////////////////////////////DELETE ROUTES////////////////////////////////////////////////
 
 // DELETE (delete chore)
-app.delete("/api/chores/:id", function (req, res) {
+router.route("/api/chores/:id").delete(function (req, res) {
     db.Teambuilder.destroy({
       where: {
         id: req.params.id
@@ -141,4 +142,5 @@ app.delete("/api/chores/:id", function (req, res) {
       })
   });
 
-}
+
+  module.exports = router;

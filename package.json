@@ -17,6 +17,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
+    "path": "^0.12.7",
     "react-native-animated-charts": "0.0.5",
     "react-router-dom": "^5.1.2",
     "sequelize": "^5.15.1",
