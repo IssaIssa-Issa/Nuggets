@@ -1,5 +1,5 @@
 // @import 'compass/reset';
-// @import 'compass/css3';
+// // @import 'compass/css3';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 $yellow: #f1c40f;
 $lime: #76c900;
@@ -15,15 +15,15 @@ $transition: all $transitionDuration ease-in-out;
 
 body
 {
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1em;
 
     text-align: center;
 
-    color: gray;
-    background: #d0d0d0;
+    // color: gray;
+    // background: #d0d0d0;
 }
 h1
 {
