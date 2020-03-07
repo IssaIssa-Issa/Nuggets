@@ -15,12 +15,12 @@ const ManageFundsForm = () => {
 
                   <div class="col-md-6 offset-md-3">
 
-            <h3>Add or Remove Funds</h3>
+            <h3>Remove Funds</h3>
 
-            <select className="form-control">
+            {/* <select className="form-control">
                 <option>Add Funds</option>
                 <option>Withdrawl Funds</option>
-            </select>
+            </select> */}
             <br></br>
             <br></br>
             <h3>Choose which Child</h3>

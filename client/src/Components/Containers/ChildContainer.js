@@ -9,26 +9,19 @@ import "./style.css"
 
 const ChildContainer = () => {
 return(
-    <div>
-    <SpecialChoreCard />
+    <>
     <div className="row">
     <div className="col-md-6">
     <BalanceCard />
-    </div>
-    <div className="col-md-6">
-     <GoalCard />
     </div>
     </div>
     <div className="row">
     <div className="col-md-6">
     <ChoreCard />
     </div>
-    <div className="col-md-6">
-     <EditGoalsCard />
     </div>
-
-</div>
-</div>
+    </>
+    
 )
 
 }

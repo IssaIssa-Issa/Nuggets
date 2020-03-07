@@ -25,11 +25,11 @@ const ParentContainer = () => {
                 <div className="col-md-3"></div>
 
                 <div className="col-md-2">
-                    <ManageFundsBtn />
-                </div>
+                    <ManageFundsBtn /></div>
+                {/* </div>
                 <div className="col-md-2">
                     <ManageChoresBtn />
-                </div>
+                </div> */}
                 <div className="col-md-3"></div>
 
                 </div>
