@@ -3,7 +3,7 @@ import React from 'react'
 const ViewAllChores = () => {
   return (
     <>
-      <div class="col-md-8 offset-md-2">
+      <div className="col-md-8 offset-md-2">
         <table className="table">
           <thead>
             <tr>
@@ -21,7 +21,7 @@ const ViewAllChores = () => {
                     <h3 for="exampleInputPassword1">Date Completed</h3>
                     <input type="Amount" className="form-control" id="exampleInputAmount1"></input>
                 </td>
-              <td scope="col"><button type="button" className="btn btn-success">Completed</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Completed</button></th>
             </tr>
             <tr>
               <td>Take out Trash</td>
@@ -30,7 +30,7 @@ const ViewAllChores = () => {
                     <h3 for="exampleInputPassword1">Date Completed</h3>
                     <input type="Amount" className="form-control" id="exampleInputAmount1"></input>
                 </td>
-              <td scope="col"><button type="button" className="btn btn-success">Completed</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Completed</button></th>
             </tr>
             <tr>
               <td>Vacuum</td>
@@ -39,7 +39,7 @@ const ViewAllChores = () => {
                     <h3 for="exampleInputPassword1">Date Completed</h3>
                     <input type="Amount" className="form-control" id="exampleInputAmount1"></input>
                 </td>
-              <td scope="col"><button type="button" className="btn btn-success">Completed</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Completed</button></th>
             </tr>
           </tbody>
         </table>

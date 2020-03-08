@@ -10,37 +10,34 @@ const KidCard = () => {
     history.push("/transactions");
   }
 
-  function handleClick2() {
-    history.push("/goals");
-  }
+  // function handleClick2() {
+  //   history.push("/goals");
+  // }
 
 
 
     return(
     
       <div className="row">
-      {/* <div class="col-md-4"></div> */}
-      <div className="col-md-6">
+      <div className="col-md">
       <div className="card" style={{width: "18rem"}}>
   <img src="images/computer.png" className="card-img-top" alt="computer"></img>
   <div className="card-body">
     <h5 className="card-title child_Name">Ben</h5>
     <h4 className="card-text">Balance</h4>
     <h3 className="card-text child_balance">$10</h3>
-    <button type="button" onClick={handleClick1} class="btn btn-primary">View Transactions</button>
-    {/* <button type="button" onClick={handleClick2} class="btn btn-primary">View Goals</button> */}
+    <button type="button" onClick={handleClick1} className="btn btn-primary">View Transactions</button>
     </div>
     </div>
     </div>
-    <div className="col-md-6">
+    <div className="col-md">
     <div className="card" style={{width: "18rem"}}>
   <img src="images/plane.png" className="card-img-top" alt="planes"></img>
     <div className="card-body">
     <h5 className="card-title child_Name">Jack</h5>
     <h4 className="card-text">Balance</h4>
     <h3 className="card-text child_balance">$30</h3>
-    <button type="button" onClick={handleClick1} class="btn btn-primary">View Transactions</button>
-    {/* <button type="button" onClick={handleClick2} class="btn btn-primary">View Goals</button> */}
+    <button type="button" onClick={handleClick1} className="btn btn-primary">View Transactions</button>
 
   </div>
   </div>

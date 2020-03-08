@@ -1,6 +1,6 @@
 /* Rectangle 31 */
 
-.rectangle{
+body{
 /* position: absolute;
 width: 375px;
 height: 812px;
@@ -12,6 +12,14 @@ background-color: #149A21;
 
 /* Ellipse 5 */
 
+.circle1 {
+    width: 211px;
+    height: 211px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #F6FA3C;
+
+  }
 .elipse5{
 position: absolute;
 width: 211px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './graphcss.scss'
 // import { ResponsiveBar } from '@nivo/bar'
-import data from './GoalContainer'
+// import data from './GoalContainer'
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.

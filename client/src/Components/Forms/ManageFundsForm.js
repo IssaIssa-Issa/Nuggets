@@ -5,7 +5,7 @@ const ManageFundsForm = () => {
         <>
         <div>
                         <nav className="navbar" style={{backgroundColor:"#20638C"}}>
-  <a className="navbar-brand" href="#" style={{color:"white"}}>
+  <a className="navbar-brand" href="/parent" style={{color:"white"}}>
   <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
     Chore Enforement Officer
   </a>
@@ -48,7 +48,7 @@ const ManageFundsForm = () => {
         
         </div>
                         <nav className="navbar" style={{backgroundColor:"#20638C"}}>
-                        <a className="navbar-brand" href="#">
+                        <a className="navbar-brand" href="/parent">
                           <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
                         </a>
                       </nav>

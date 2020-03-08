@@ -3,7 +3,7 @@ import React from 'react'
 const PendingTranList = () => {
   return (
     <>
-      <div class="col-md-8 offset-md-2">
+      <div className="col-md-8 offset-md-2">
         <table className="table">
           <thead>
             <tr>
@@ -23,8 +23,8 @@ const PendingTranList = () => {
               <td>Empty Dishwaser</td>
               <td>$1.00</td>
               <td>Pending</td>
-              <td scope="col"><button type="button" className="btn btn-success">Approve</button></td>
-              <td scope="col"><button type="button" className="btn btn-danger">Try Again</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Approve</button></th>
+              <th scope="col"><button type="button" className="btn btn-danger">Try Again</button></th>
             </tr>
             <tr>
               <td>2</td>
@@ -33,8 +33,8 @@ const PendingTranList = () => {
               <td>Take out Trash</td>
               <td>$2.00</td>
               <td>Pending</td>
-              <td scope="col"><button type="button" className="btn btn-success">Approve</button></td>
-              <td scope="col"><button type="button" className="btn btn-danger">Try Again</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Approve</button></th>
+              <th scope="col"><button type="button" className="btn btn-danger">Try Again</button></th>
             </tr>
             <tr>
               <td>3</td>
@@ -43,8 +43,8 @@ const PendingTranList = () => {
               <td>Vacuum</td>
               <td>$1.00</td>
               <td>Pending</td>
-              <td scope="col"><button type="button" className="btn btn-success">Approve</button></td>
-              <td scope="col"><button type="button" className="btn btn-danger">Try Again</button></td>
+              <th scope="col"><button type="button" className="btn btn-success">Approve</button></th>
+              <th scope="col"><button type="button" className="btn btn-danger">Try Again</button></th>
             </tr>
           </tbody>
         </table>
