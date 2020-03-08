@@ -1,6 +1,15 @@
 import React from 'react'
 
 const ViewAllChores = () => {
+
+
+
+
+
+
+
+
+  
   return (
     <>
       <div className="col-md-8 offset-md-2">

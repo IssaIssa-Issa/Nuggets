@@ -8,7 +8,6 @@ CREATE TABLE `chores` (
     `chores_id` int NOT NULL AUTO_INCREMENT,
     `admin_id` int NOT NULL,
     `chore_name` varchar(255) NOT NULL,
-    `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `date_approved` datetime DEFAULT NULL,
     `date_completed` datetime DEFAULT NULL,
     `completed_by_child_id` int DEFAULT NULL,
@@ -49,7 +48,7 @@ CREATE TABLE `login` (
     `admin_id` int NOT NULL,
     `child_id` int NOT NULL,
     PRIMARY KEY (`login_id`)
-) 
+); 
 
 CREATE TABLE `goals` (
     `goals_id` int NOT NULL AUTO_INCREMENT,
