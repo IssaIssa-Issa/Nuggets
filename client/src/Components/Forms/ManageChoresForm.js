@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-import { List, ListItem } from "../List";
-import DeleteBtn from "../DeleteBtn";
+import { List, ListItem } from "../List/index";
+import DeleteBtn from "../DeleteBtn/index";
 
 const ManageChoresForm = () => {
 // const [chore , setChore] = React.useState([])
@@ -64,7 +64,7 @@ console.log(newChore)
       <>
         <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
           <a className="navbar-brand" href="#" style={{ color: "white" }}>
-            <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt=""></img>
+            <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
             Chore Enforement Officer
   </a>
         </nav>
@@ -94,15 +94,8 @@ console.log(newChore)
           ) : (
               <h3>No Results to Display</h3>
             )}
-    
 
-
-
-
-
-
-
-          <table className="table">
+          {/* <table className="table">
             <thead>
               <tr>
                 <th scope="col">Chore</th>
@@ -122,12 +115,12 @@ console.log(newChore)
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
               <tr>
-                {/* <td>{chore}</td>
-                <td>{amount}</td> */}
+                <td>{chore}</td>
+                <td>{amount}</td>
                 <td scope="col"><button type="button" className="btn btn-success">Delete</button></td>
               </tr>
             </tbody>
-          </table>
+          </table> */}
         </div>
 
         <form>
@@ -135,15 +128,15 @@ console.log(newChore)
             <br></br>
             <br></br>
 
-            <h3>Add Chores</h3>
+            <h3>Add Chores Below</h3>
             <div className="form-group">
-              <h3>Chore Name</h3>
+              <h4>Chore Name</h4>
               <input type="Name" className="form-control" onChange={e => setChores(e.target.value)} id="choreName"></input>
             </div>
             <br></br>
             <br></br>
             <div className="form-group">
-              <h3>Amount</h3>
+              <h4>Amount</h4>
               <input type="Amount" className="form-control" onChange={e => setAmount(e.target.value)}  id="choreAmount"></input>
             </div>
             <button type="submit" onClick={addChore} className="btn btn-primary">Submit</button>
