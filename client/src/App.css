@@ -16,6 +16,15 @@ label {
   width: 100%
 }
 
+.children-cards, .row {
+  text-align: center;
+  margin: auto;
+}
+
+.btn{
+  margin: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

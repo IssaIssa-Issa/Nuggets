@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 
 
-const KidCard = () => {
+const KidCard = (props) => {
 
   const history = useHistory();
       
@@ -10,40 +10,20 @@ const KidCard = () => {
     history.push("/transactions");
   }
 
-  // function handleClick2() {
-  //   history.push("/goals");
-  // }
-
-
-
+  function handleClick2(props) {
+    history.push("/Goals");
+  }
     return(
-    
-      <div className="row">
-      <div className="col-md">
-      <div className="card" style={{width: "18rem"}}>
-  <img src="images/computer.png" className="card-img-top" alt="computer"></img>
-  <div className="card-body">
-    <h5 className="card-title child_Name">Ben</h5>
-    <h4 className="card-text">Balance</h4>
-    <h3 className="card-text child_balance">$10</h3>
-    <button type="button" onClick={handleClick1} className="btn btn-primary">View Transactions</button>
-    </div>
-    </div>
-    </div>
-    <div className="col-md">
-    <div className="card" style={{width: "18rem"}}>
-  <img src="images/plane.png" className="card-img-top" alt="planes"></img>
+  <div className="card" style={{width: 400 + "px"}}>
     <div className="card-body">
-    <h5 className="card-title child_Name">Jack</h5>
-    <h4 className="card-text">Balance</h4>
-    <h3 className="card-text child_balance">$30</h3>
-    <button type="button" onClick={handleClick1} className="btn btn-primary">View Transactions</button>
-
-  </div>
-  </div>
-</div>
-
-</div>
+    {/* To Do: Get image source as part of the db */}
+  <img src="images/computer.png" style={{width: 200 + "px"}} className="card-img-top" alt="computer"></img>
+    <h2 className="card-title child_Name">{props.name}</h2>
+    <h6 className="card-text child_balance">Balance: ${props.balance}</h6>
+    <button type="button" onClick={handleClick1} style={{margin: 10 + "px"}}className="btn btn-primary">View Transactions</button>
+    <button type="button" onClick={handleClick2} style={{margin: 10 + "px"}}className="btn btn-primary">View Goals</button>
+    </div>
+    </div>
     )
 }
 
