@@ -21,6 +21,13 @@ const router = require("express").Router()
                 res.json(dbNuggets);
             })
     });
+    // GET (show all chores)
+    router.route("/api/chores/:chores_id").get(function (req, res) {
+        db.Chores.findOne({where: {chores_id: req.params.chores_id}})
+            .then(function (dbNuggets) {
+                res.json(dbNuggets);
+            })
+    });
 
     // GET (show all children)
     router.route("/api/children/").get(function (req, res) {
@@ -110,7 +117,7 @@ const router = require("express").Router()
 ///////////////////////////////////////////UPDATE ROUTES////////////////////////////////////////////////
 
     // UPDATE (update chore)
-    router.route("/api/chores/:id").put(function (req, res) {
+    router.route("/api/chores/:chores_id").put(function (req, res) {
         db.Chores.update({
             date_approved: NOW(),
             date_completed: NOW(), 
@@ -131,19 +138,12 @@ const router = require("express").Router()
 ///////////////////////////////////////////DELETE ROUTES////////////////////////////////////////////////
 
 // DELETE (delete chore)
-router.route("/api/chores/:id").delete(function (req, res) {
+router.route("/api/chores/:chores_id").delete(function (req, res) {
     db.Chores.destroy({
       where: {
-        id: req.params.id
+        chores_id: req.params.chores_id
       }
     })
-      .then(function (dbNuggets) {
-        res.json(dbNuggets);
-      })
-  });
-
-  router.route("/api/chores").delete(function (req, res) {
-    db.Chores.destroy()
       .then(function (dbNuggets) {
         res.json(dbNuggets);
       })
