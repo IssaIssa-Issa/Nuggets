@@ -7,7 +7,7 @@ const router = require("express").Router()
 
     // GET (show all transactions)
     router.route("/api/transaction/").get( function (req, res) {
-        db.Transaction.findAll({})
+        db.Transactions.findAll({})
             .then(function (dbNuggets) {
                 res.json(dbNuggets);
             })
@@ -75,7 +75,8 @@ const router = require("express").Router()
             amount: req.body.amount,
             admin_id: req.body.admin_id,
             child_id: req.body.child_id,
-            admin_notes: req.body.admin_notes,
+            admin_comments: req.body.admin_comments,
+            date: req.body.date
         })
             .then(function (dbNuggets) {
                 res.send(dbNuggets);
@@ -148,6 +149,19 @@ router.route("/api/chores/:chores_id").delete(function (req, res) {
         res.json(dbNuggets);
       })
   });
+  // DELETE (delete chore)
+
+router.route("/api/transaction/:transaction_id").delete(function (req, res) {
+    db.Transactions.destroy({
+      where: {
+        transaction_id: req.params.transaction_id
+      }
+    })
+      .then(function (dbNuggets) {
+        res.json(dbNuggets);
+      })
+  });
+
 
 
   module.exports = router;

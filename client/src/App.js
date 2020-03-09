@@ -7,7 +7,6 @@ import ChildContainer from './Components/Containers/ChildContainer';
 import Callback from './callback';
 import ManageFundsForm from './Components/Forms/ManageFundsForm'
 import ManageChoresForm from './Components/Forms/ManageChoresForm'
-import ManageChildForm from './Components/Forms/ManageChildForm'
 import Transactions from './Components/Containers/Transactions'
 import MyResponsiveBar from './Components/Containers/GoalChart'
 import EditGoals from './Components/Forms/EditGoals'
@@ -23,7 +22,6 @@ function App() {
               <Route exact path="/child" component={ChildContainer} />
               <Route exact path="/managefundsform" component={ManageFundsForm} />
               <Route exact path="/managechoresform" component={ManageChoresForm} />
-              <Route exact path="/managechildform" component={ManageChildForm} />
               <Route exact path="/transactions" component={Transactions} />
               <Route exact path="/Goals" component={MyResponsiveBar} />
               <Route exact path="/editgoals" component={EditGoals} />

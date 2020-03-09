@@ -10,7 +10,18 @@ module.exports = function (sequelize, DataTypes) {
         goal_amount: DataTypes.DECIMAL,
         child_id: DataTypes.INTEGER,
 		goal_color: DataTypes.STRING,
-		goal_name: DataTypes.STRING
+		goal_name: DataTypes.STRING,
+		updatedAt: {
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
+		createdAt:
+		{
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
 	},
 	{
 	  tableName: "goals"

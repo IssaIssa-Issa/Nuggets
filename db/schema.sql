@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS nuggets;
+DROP DATABASE IF EXISTS database_development;
 
-CREATE DATABASE nuggets;
+CREATE DATABASE database_development;
 
-USE nuggets;
+USE database_development;
 
 CREATE TABLE `chores` (
     `chores_id` int NOT NULL AUTO_INCREMENT,
@@ -22,8 +22,8 @@ CREATE TABLE `transactions` (
     `amount` decimal NOT NULL,
     `admin_id` int NOT NULL,
     `child_id` int NOT NULL,
-    `admin_comments` varchar(255) DEFAULT NULL,
-    `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `admin_comments` varchar(255) NOT NULL,
+    `date` date NOT NULL,
     PRIMARY KEY (`transaction_id`)
 );
 

@@ -6,14 +6,25 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
-		  },
-		admin_name: DataTypes.STRING
+		},
+		admin_name: DataTypes.STRING,
+		updatedAt: {
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
+		createdAt:
+		{
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
 	},
-	{
-	  tableName: "admin"
-	}
+		{
+			tableName: "admin"
+		}
 	);
-  
+
 	// Makes the Admin model available for other files (will also create a table)
 	return Admin;
-  }
+}

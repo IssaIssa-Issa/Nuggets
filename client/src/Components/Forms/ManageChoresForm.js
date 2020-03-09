@@ -79,7 +79,6 @@ const ManageChoresForm = () => {
           )}
       </div>
 
-
       {/* Add a chore form! */}
       <hr />
       <form>

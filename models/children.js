@@ -9,8 +9,19 @@ module.exports = function (sequelize, DataTypes) {
 		  },
         child_name: DataTypes.STRING,
         admin_id: DataTypes.INTEGER,
-		balance: DataTypes.DECIMAL
-	},
+		balance: DataTypes.DECIMAL,
+		updatedAt: {
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
+		createdAt:
+		{
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
+		},
 	{
 	  tableName: "children"
 	}

@@ -10,7 +10,18 @@ module.exports = function (sequelize, DataTypes) {
         username: DataTypes.STRING,
         password: DataTypes.STRING,
         admin_id: DataTypes.INTEGER,
-		child_id: DataTypes.INTEGER
+		child_id: DataTypes.INTEGER,
+		updatedAt: {
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
+		createdAt:
+		{
+			type: DataTypes.DATEONLY,
+			allowNull: false,
+			defaultValue: DataTypes.NOW
+		},
 	},
 	{
 	  tableName: "login"
