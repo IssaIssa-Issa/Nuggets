@@ -1,15 +1,15 @@
 import React from 'react'
 import BalanceCard from '../Cards/BalanceCard'
 // import PendingTranList from '../PendingTranList'
-// import GoalCard from '../Cards/GoalCard'
+import GoalCard from '../Cards/GoalCard'
 import ChoreCard from '../Cards/ChoreCard'
 // import SpecialChoreCard from '../Cards/SpecialChoreCard'
-// import EditGoalsCard from '../Cards/EditGoalsCard'
+import EditGoalsCard from '../Cards/EditGoalsCard'
 import "./style.css"
 
 const ChildContainer = () => {
 return(
-    <body>
+    <div className="childContainer" style={{width:"480", marginLeft: "105", }}>
     <div className="row">
     <div className="col-md-6">
     <BalanceCard />
@@ -20,7 +20,18 @@ return(
     <ChoreCard />
     </div>
     </div>
-    </body>
+    <div className="row">
+    <div className="col-md-6">
+    <GoalCard />
+    </div>
+    </div>
+    <div className="row">
+    <div className="col-md-6">
+    <EditGoalsCard />
+    </div>
+    </div>
+
+    </div>
     
 )
 

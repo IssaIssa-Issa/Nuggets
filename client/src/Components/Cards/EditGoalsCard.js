@@ -10,19 +10,19 @@ const EditGoalsCard = () => {
     history.push("/child");
   }
 
-////Need AJAX --- PUT CODE HERE
 
     return(
     
-      <div className="card elipse6" style={{width: "18rem"}}>
-  <img src="..." className="card-img-top" alt="..."></img>
-  <div className="card-body">
-    <h1 className="card-text">Add Goal</h1>
-    <button type="button" onClick={handleClick} class="btn btn-primary">Add Goal</button>
+      <div className="circleOrange">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+
+    <button type="button" onClick={handleClick} class="btn btn-primary KidButton">Add Goal</button>
 
   </div>
-
-</div>
 
     )
 }

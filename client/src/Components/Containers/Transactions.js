@@ -2,10 +2,11 @@ import React from 'react'
 
 const Transactions = () => {
     return (
-        <>
+      <div classname="circleRed">
+        <div className="circleBlue" style={{width:"1151", height: "1511"}}>
         <h1 style={{textAlign: "center"}}>Balance $10</h1>
-        <div class="col-md-8 offset-md-2">
-        <table className="table">
+        <div class="col-md-8 offset-md-2" style={{background: "white"}}>
+        <table className="table" >
           <thead>
             <tr>
               <th scope="col">Date Completed</th>
@@ -43,7 +44,8 @@ const Transactions = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
+    </div>
   )
 }
 
