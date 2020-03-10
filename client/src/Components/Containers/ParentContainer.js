@@ -7,10 +7,21 @@ import axios from 'axios'
 
 const ParentContainer = () => {
   const [childrenArray, setChildrenArray] = useState([])
+  //Global Variables for Balance Calculation
+let newBalance
+let transactions = []
+let chores = []
+let sumOfChores
+let sumOfTransactions
+
+
 
   useEffect(() => {
     loadChildren()
+    calculateBalance()
   }, [])
+
+
 
   // Loads all children
   function loadChildren() {
@@ -20,6 +31,46 @@ const ParentContainer = () => {
       )
       .catch(err => console.log(err));
   };
+
+
+// Function to Calculate Transactions
+  function calculateBalance() {
+    //Axios call to get transactions
+    axios.get("/api/transaction/")
+    .then(res => {
+      for (var i = 0; i < res.data.length; i++) {
+        transactions.push(parseInt(res.data[i].amount))
+    }
+      let transactionSum = transactions => transactions.reduce((a,b) => a + b, 0)
+      console.log(transactionSum(transactions))
+      sumOfTransactions = transactionSum(transactions)  
+      //Axios call to get chores
+      axios.get("/api/chores/")
+      .then(res => {
+        for (var i = 0; i < res.data.length; i++) {
+          chores.push(parseInt(res.data[i].amount))
+        }
+        let choresSum = chores => chores.reduce((a,b) => a + b, 0)
+        console.log(choresSum(chores))
+        sumOfChores = choresSum(chores)
+
+        //calculation
+        newBalance = sumOfChores-sumOfTransactions;
+        console.log(newBalance)
+
+        //Axios call to put balance into database
+ 
+        axios.put("/api/children/1", {data: {balance: newBalance}}).then(res => {
+          console.log('saved successfully')
+            }
+        ).catch(err => console.log(err));
+
+      } 
+    )
+    .catch(err => console.log(err));
+    })
+}
+
 
   return (
       <>

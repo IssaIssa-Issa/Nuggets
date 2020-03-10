@@ -135,6 +135,21 @@ const router = require("express").Router()
       });
 
 
+          // UPDATE (update chore)
+    router.route("/api/children/:child_id").put(function (req, res) {
+        db.Children.update({
+            balance: req.body.balance
+        },{
+          where: {
+            child_id: req.params.id
+          }
+        })
+          .then(function (dbNuggets) {
+            res.json(dbNuggets);
+          })
+      });
+
+
 
 ///////////////////////////////////////////DELETE ROUTES////////////////////////////////////////////////
 
