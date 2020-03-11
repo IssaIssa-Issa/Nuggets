@@ -1,10 +1,16 @@
-import React, {Component} from 'react';
+import React, {Component, useReducer} from 'react';
 import {withRouter} from 'react-router-dom';
 import auth0Client from './auth';
 class Callback extends Component {
   async componentDidMount() {
     await auth0Client.handleAuthentication();
-    this.props.history.replace('/');
+    if (this.role === "Parent") {
+      this.props.history.replace('/parent');
+    }
+    else {
+      this.props.history.replace('/child');
+    }
+
   }
   render() {
     return (
