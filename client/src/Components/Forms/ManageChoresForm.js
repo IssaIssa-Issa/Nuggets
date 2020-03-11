@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { List, ListItem } from "../List/index";
-import DeleteBtn from "../DeleteBtn/index";
+import DeleteBtn from "../Buttons/DeleteBtn/index";
 
 const ManageChoresForm = () => {
 
