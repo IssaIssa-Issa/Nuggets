@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Children } from 'react'
+import React, { useState, useEffect } from 'react'
 import KidCard from '../Cards/KidCard'
 import PendingTranList from '../PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
@@ -57,10 +57,10 @@ let sumOfTransactions
         //calculation
         newBalance = sumOfChores-sumOfTransactions;
         console.log(newBalance)
-
+    
         //Axios call to put balance into database
  
-        axios.put("/api/children/1", {data: {balance: newBalance}}).then(res => {
+        axios.put(`/api/children/1`, {balance: newBalance}).then(res => {
           console.log('saved successfully')
             }
         ).catch(err => console.log(err));

@@ -21,7 +21,7 @@ const router = require("express").Router()
                 res.json(dbNuggets);
             })
     });
-    // GET (show all chores)
+    // GET (show one)
     router.route("/api/chores/:chores_id").get(function (req, res) {
         db.Chores.findOne({where: {chores_id: req.params.chores_id}})
             .then(function (dbNuggets) {
@@ -36,6 +36,14 @@ const router = require("express").Router()
                 res.json(dbNuggets);
             })
     });
+
+        // GET (show one)
+        router.route("/api/children/:child_id").get(function (req, res) {
+            db.Children.findOne({where: {child_id: req.params.child_id}})
+                .then(function (dbNuggets) {
+                    res.json(dbNuggets);
+                })
+        });
 
     // GET (show all admin)
     router.route("/api/admin/").get(function (req, res) {
@@ -141,7 +149,7 @@ const router = require("express").Router()
             balance: req.body.balance
         },{
           where: {
-            child_id: req.params.id
+            child_id: req.params.child_id
           }
         })
           .then(function (dbNuggets) {
