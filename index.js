@@ -7,6 +7,8 @@ var db = require ("./models");
 const path = require('path')
 const apiRoute = require("./controllers/chores_controller")
 
+app.use(express.static('public'))
+
 require('dotenv').config();
 app.use(logger('dev'));
 
