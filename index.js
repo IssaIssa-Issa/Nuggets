@@ -21,7 +21,7 @@ app.use((err, req, res, next) => {
 app.use(apiRoute)
 
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname, 'client/build', 'public', 'index.html'));
+	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
 });
 
 db.sequelize.sync().then(function () {
