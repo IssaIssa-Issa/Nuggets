@@ -7,7 +7,6 @@ var db = require ("./models");
 const path = require('path')
 const apiRoute = require("./controllers/chores_controller")
 
-app.use(express.static('public'))
 
 require('dotenv').config();
 app.use(logger('dev'));
@@ -21,6 +20,8 @@ app.use((err, req, res, next) => {
     next();
 });
 app.use(apiRoute)
+
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
