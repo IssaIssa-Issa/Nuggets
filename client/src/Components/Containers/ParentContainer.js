@@ -73,7 +73,7 @@ let sumOfTransactions
 
 
   return (
-      <>
+      <div>
       <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/parent" style={{ color: "white" }}>
           <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
@@ -106,8 +106,6 @@ let sumOfTransactions
               <ManageFundsBtn className= "parent-btns"/>
               <ManageChoresBtn className= "parent-btns"/>
             
-          
-
       </div>
           <br></br>
           <br></br>
@@ -121,7 +119,7 @@ let sumOfTransactions
               <img src="/images/logo" width="30" height="30" alt=""></img>
             </a>
           </nav>
-</>
+</div>
 
       )
             

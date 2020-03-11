@@ -10,18 +10,18 @@ const db = {};
 
 let sequelize;
 
-if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+// if (process.env.JAWSDB_URL) {
+//   sequelize = new Sequelize(process.env.JAWSDB_URL, {
 
-    //Find a way to hide credentials when logging into remote jaws db with sequelize package
-    dialect: "mysql",
-    protocol: "mysql",
-    port: 3306,
-    host: "<heroku host>",
-    logging: true //false
-  });
+//     //Find a way to hide credentials when logging into remote jaws db with sequelize package
+//     dialect: "mysql",
+//     protocol: "mysql",
+//     port: 3306,
+//     host: "<heroku host>",
+//     logging: true //false
+//   });
 
-} else {
+// } else {
 
 
 if (config.use_env_variable) {
@@ -29,7 +29,7 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-}
+// }
 
 fs
   .readdirSync(__dirname)
