@@ -19,11 +19,11 @@ app.use((err, req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
 app.use(apiRoute)
 
-app.use(express.static(path.join(__dirname, '../client/build')));
-app.use(express.static(path.join(__dirname, '../client/public')));
-
+app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(__dirname, './client/public')));
 
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
