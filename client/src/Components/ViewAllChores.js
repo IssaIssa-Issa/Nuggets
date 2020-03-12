@@ -3,8 +3,10 @@ import axios from 'axios'
 import { List, ListItem } from "./List/index";
 const ViewAllChores = () => {
   const [choresArray, setChoresArray] = useState([])
+  const [date, setDate] = useState()
   useEffect(() => {
     loadChores()
+    updateChore()
   }, [])
     // Loads all chores
     function loadChores() {
@@ -14,21 +16,27 @@ const ViewAllChores = () => {
         )
         .catch(err => console.log(err));
     };
-  
+    function updateChore(chores_id) {
+      console.log(date)
+      console.log(chores_id)
+    axios.put(`/api/chores/${chores_id}`, {date_completed: date}).then(res => {
+      console.log('saved successfully')
+        }
+    ).catch(err => console.log(err));
+  }
   return (
     <div>
 <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/child" style={{ color: "white" }}>
           <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
         </a>
-        <h3 className="header-title">Mark Chores Complete</h3>
+        <h3 className="header-title">View Open Chores</h3>
       </nav>
             <div className = "container">
-
       <div className="col-md-8 offset-md-2">
         <br />
         <br />
-        <h4>Recent Transactions</h4>
+        <h4>Mark Chores Complete</h4>
         {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
         {choresArray.length ? (
           <List>
@@ -38,8 +46,9 @@ const ViewAllChores = () => {
                   <strong>
                     <b> {chore.chore_name} </b> for: <i> ${chore.amount}.00 </i>
                   </strong>
-                  <input type="Date" className="form-control" id="date"></input>
-                  <button type="button" className="btn btn-success">Completed</button>
+                  <hr />
+                  <input type="Date" onChange={e => setDate(e.target.value)} className="form-control" id="date"></input>
+                  <button type="button" onClick={() => updateChore(chore.chores_id)} className="btn btn-success">Completed</button>
                 </ListItem>
               );
             })}
@@ -51,7 +60,6 @@ const ViewAllChores = () => {
       </div>
       </div>
       </div>
-
   )
 }
 export default ViewAllChores;
