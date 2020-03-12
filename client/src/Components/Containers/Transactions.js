@@ -2,12 +2,16 @@ import React from 'react'
 
 const Transactions = () => {
     return (
+      <>
+      <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+  <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+    <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
+  </a>
+  <h3 className="header-title">Log Out</h3>
+
+</nav>
+
       <div >
-              <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
-        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
-          <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
-        </a>
-      </nav>
 
         <h1 style={{textAlign: "center"}}>Balance $10</h1>
         <div class="col-md-8 offset-md-2" style={{background: "white"}}>
@@ -52,6 +56,7 @@ const Transactions = () => {
       </div>
 
     </div>
+    </>
   )
 }
 
