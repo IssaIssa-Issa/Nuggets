@@ -119,7 +119,7 @@ const ManageFundsForm = () => {
       <br />
 
       {/* To Do: Footer Code, do we want this to be a component? */}
-      <nav className="footer" style={{ backgroundColor: "#20638C" }}>
+      <nav className="footer parentFooter" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-white font-small"> © 2020 Copyright: Nuggets</div>
           <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
         </a>
