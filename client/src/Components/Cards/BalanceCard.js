@@ -13,7 +13,7 @@ const BalanceCard = () => {
   
 
     return(
-    <div className="circleYellow">
+    <div className="circleOrange">
       <br></br>
       <br></br>
       <br></br>
