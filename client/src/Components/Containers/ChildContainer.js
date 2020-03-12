@@ -7,6 +7,12 @@ import "./style.css"
 const ChildContainer = () => {
 return(
     <>
+            <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
+        </a>
+      </nav>
+
     <div className="childContainer" >
     <div className="row">
     <div className="col-md-6">
@@ -25,11 +31,6 @@ return(
     </div>
 
     </div>
-        <nav className="navbar childFooter" style={{ backgroundColor: "#20638C" }}>
-        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
-          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
-        </a>
-      </nav>
 </>
 )
 
