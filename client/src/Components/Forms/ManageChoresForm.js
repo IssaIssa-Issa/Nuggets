@@ -45,8 +45,8 @@ const ManageChoresForm = () => {
   }
 
   return (
-    <div>
-      <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+    <div className="parentContainer">
+    <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/parent" style={{ color: "white" }}>
           <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
         </a>
