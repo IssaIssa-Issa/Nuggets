@@ -4,7 +4,7 @@ import PendingTranList from '../PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
 import ManageChoresBtn from '../Buttons/manageChoresBtn'
 import axios from 'axios'
-
+import '../Containers/style.css'
 const ParentContainer = () => {
   const [childrenArray, setChildrenArray] = useState([])
   //Global Variables for Balance Calculation
@@ -73,7 +73,7 @@ let sumOfTransactions
 
 
   return (
-      <div>
+      <div className="parentContainer">
       <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/parent" style={{ color: "white" }}>
           <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
@@ -81,7 +81,7 @@ let sumOfTransactions
       </nav>
       <br></br>
       <br></br>
-<div className="container">
+<div >
 {/* Loops through all children in db and creates cards for each */}
       {childrenArray.length ? (
         <div className="children-cards">
@@ -101,10 +101,10 @@ let sumOfTransactions
 
           <br></br>
           <div className="row">
-
-              <ManageFundsBtn className= "parent-btns"/>
-              <ManageChoresBtn className= "parent-btns"/>
-            
+<div className="col-md-8 offset-md-2">
+              <ManageFundsBtn />
+              <ManageChoresBtn />
+              </div>
       </div>
           <br></br>
           <br></br>
