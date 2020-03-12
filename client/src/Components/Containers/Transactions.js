@@ -2,8 +2,7 @@ import React from 'react'
 
 const Transactions = () => {
     return (
-      <div classname="circleRed">
-        <div className="circleBlue" style={{width:"1151", height: "1511"}}>
+      <div className="childContainer">
         <h1 style={{textAlign: "center"}}>Balance $10</h1>
         <div class="col-md-8 offset-md-2" style={{background: "white"}}>
         <table className="table" >
@@ -43,8 +42,14 @@ const Transactions = () => {
             </tr>
           </tbody>
         </table>
+
       </div>
-    </div>
+      <nav className="navbar, childFooter" style={{ backgroundColor: "#20638C" }}>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
+        </a>
+      </nav>
+
     </div>
   )
 }

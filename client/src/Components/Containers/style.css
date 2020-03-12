@@ -1,6 +1,8 @@
 
 .childContainer{
 background-image: url(../../dotBackground.jpg);
+width:100%;
+height: 100%;
 }
 
 .parentContainer{
@@ -50,3 +52,16 @@ background-image: url(../../dotBackground.jpg);
 
   }
 
+.childFooter{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+.parentFooter{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  }

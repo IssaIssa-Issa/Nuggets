@@ -22,6 +22,11 @@ return(
     <GoalCard />
     </div>
     </div>
+    <nav className="navbar parentFooter" style={{ backgroundColor: "#20638C" }}>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
+        </a>
+      </nav>
 
     </div>
     
