@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
 import React, { useState, useEffect } from 'react'
-=======
-import React, { useState, useEffect, Children } from 'react'
-import auth0Client from '../../auth';
->>>>>>> Stashed changes
 import KidCard from '../Cards/KidCard'
 import PendingTranList from '../PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
@@ -78,16 +73,11 @@ let sumOfTransactions
 
 
   return (
-<<<<<<< Updated upstream
       <div>
-=======
-<>
->>>>>>> Stashed changes
       <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/parent" style={{ color: "white" }}>
           <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
         </a>
-        <h3 className="header-title">Parent Dashboard. {auth0Client.getProfile().name}</h3>
       </nav>
       <br></br>
       <br></br>
@@ -128,12 +118,7 @@ let sumOfTransactions
               <img src="/images/logo" width="30" height="30" alt=""></img>
             </a>
           </nav>
-<<<<<<< Updated upstream
 </div>
-=======
-</>
-      
->>>>>>> Stashed changes
 
       )
             

@@ -32,7 +32,7 @@ label {
 }
 
 .App-header {
-  background: radial-gradient(100.68% 53.69% at 50% 50%, #F6FA3C 12.14%, #149A21 100%);
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,16 +40,6 @@ label {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.mr-2 {
-  background: linear-gradient(338.59deg, #20628C 27.2%, #F6FA3C 116.37%);
-
-}
-
-img {
-  position: relative;
-  top: 30vh;
 }
 
 .App-link {
@@ -64,3 +54,4 @@ img {
     transform: rotate(360deg);
   }
 }
+
