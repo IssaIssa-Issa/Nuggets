@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../../App.css';
-import auth0Client from '../../auth';
+import auth0Client from './../Authentication/auth';
 import logo from '../../logo.png';
+
   class Login extends Component {
   signIn = () => {
     auth0Client.signIn();

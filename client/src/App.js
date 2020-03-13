@@ -4,7 +4,7 @@ import './App.css';
 import login from './Components/Containers/login'
 import ParentContainer from './Components/Containers/ParentContainer';
 import ChildContainer from './Components/Containers/ChildContainer';
-import Callback from './callback';
+import Callback from './Components/Authentication/callback';
 import ManageFundsForm from './Components/Forms/ManageFundsForm'
 import ManageChoresForm from './Components/Forms/ManageChoresForm'
 import TransactionContainer from './Components/Containers/TransactionContainer'
