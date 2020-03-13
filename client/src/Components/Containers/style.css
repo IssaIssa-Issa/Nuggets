@@ -1,7 +1,13 @@
 .childContainer {
   background-image: url(../../dotBackground.jpg);
-  width: 100%;
-  height: 1080px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.choretxt {
+  background: #E57319;
+  color:#FEFFF0;
+  padding: 5px
 }
 
 .parentContainer {

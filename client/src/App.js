@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import login from './Components/Containers/login'
+import login from './Components/Containers/login';
 import ParentContainer from './Components/Containers/ParentContainer';
 import ChildContainer from './Components/Containers/ChildContainer';
 import Callback from './Components/Authentication/callback';
-import ManageFundsForm from './Components/Forms/ManageFundsForm'
-import ManageChoresForm from './Components/Forms/ManageChoresForm'
-import TransactionContainer from './Components/Containers/TransactionContainer'
-import MyResponsiveBar from './Components/Containers/GoalChart'
-import EditGoals from './Components/Forms/EditGoals'
-import ViewAllChores from './Components/Containers/ViewAllChores'
+import ManageFundsForm from './Components/Forms/ManageFundsForm';
+import ManageChoresForm from './Components/Forms/ManageChoresForm';
+import TransactionContainer from './Components/Containers/TransactionContainer';
+import MyResponsiveBar from './Components/Containers/GoalChart';
+import EditGoals from './Components/Forms/EditGoals';
+import ViewAllChores from './Components/Containers/ViewAllChores';
 
 function App() {
         return (

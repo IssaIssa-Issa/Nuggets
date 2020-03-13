@@ -113,9 +113,8 @@ let sumOfTransactions
 
           </div>
 
-          <nav className="footer parentFooter" style={{ backgroundColor: "#20638C" }}>
-        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-white font-small"> © 2020 Copyright: Nuggets</div>
-          <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+          <nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
+        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{"font-size": 15 + "px"}}> © 2020 Copyright: Nuggets</div>
         </a>
       </nav>
 </div>
