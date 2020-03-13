@@ -16,18 +16,19 @@ return(
       </nav>
 
     <div className="childContainer" >
+    <br />
     <div className="row">
-    <div className="col-md-6">
+    <div className="col-md-6 offset-md-3">
     <BalanceCard />
     </div>
     </div>
     <div className="row">
-    <div className="col-md-6">
+    <div className="col-md-6 offset-md-3">
     <ChoreCard />
     </div>
     </div>
     <div className="row">
-    <div className="col-md-6">
+    <div className="col-md-6 offset-md-3">
     <GoalCard />
     </div>
     </div>

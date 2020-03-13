@@ -10,7 +10,7 @@ import ManageChoresForm from './Components/Forms/ManageChoresForm'
 import TransactionContainer from './Components/Containers/TransactionContainer'
 import MyResponsiveBar from './Components/Containers/GoalChart'
 import EditGoals from './Components/Forms/EditGoals'
-import ViewAllChores from './Components/ViewAllChores'
+import ViewAllChores from './Components/Containers/ViewAllChores'
 
 function App() {
         return (

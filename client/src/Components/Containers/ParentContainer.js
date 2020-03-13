@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import KidCard from '../Cards/KidCard'
-import PendingTranList from '../PendingTranList'
+import PendingTranList from './PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
 import ManageChoresBtn from '../Buttons/manageChoresBtn'
 import axios from 'axios'

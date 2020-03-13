@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-import { List, ListItem } from "./List/index";
+import { List, ListItem } from "../List/index";
 const ViewAllChores = () => {
   const [choresArray, setChoresArray] = useState([])
   const [date, setDate] = useState()
