@@ -1,75 +1,76 @@
-
-.childContainer{
-background-image: url(../../dotbackground.jpg);
-width:100%;
-height: 100%;
+.childContainer {
+  background-image: url(../../dotBackground.jpg);
+  width: 1450px;
+  height: 1080px;
 }
 
-.parentContainer{
+.parentContainer {
   background-color: #FEFFF0;
 }
-.KidButton{
+
+.KidButton {
   color: #FFFFFF;
   font-family: Fjalla One;
   font-size: x-large;
   font-weight: 500;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
 }
+
 .circleYellow {
-    float: left;
-    width: 211px;
-    height: 211px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #F6FA3C;
+  float: left;
+  width: 211px;
+  height: 211px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #F6FA3C;
+}
 
-  }
-  .circleBlue {
-    float: left;
-    width: 211px;
-    height: 211px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #1B618E;
+.circleBlue {
+  float: left;
+  width: 211px;
+  height: 211px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #1B618E;
+}
 
-  }
-  .circleRed {
-    width: 211px;
-    height: 211px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #DB323B;
+.circleRed {
+  width: 211px;
+  height: 211px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #DB323B;
+}
 
-  }
-  .circleOrange {
-    float: left;
-    width: 211px;
-    height: 211px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #E57319;
+.circleOrange {
+  float: left;
+  width: 211px;
+  height: 211px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #E57319;
+}
 
-  }
-
-#childFooterLogo{
+#childFooterLogo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;;
+  width: 50%;
+  ;
 }
 
-.childFooter{
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-text-align: center;
-}
-
-.parentFooter{
+.childFooter {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  }
+  text-align: center;
+}
+
+.parentFooter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

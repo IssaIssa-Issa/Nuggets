@@ -26,11 +26,12 @@ const ViewAllChores = () => {
   }
   return (
     <div>
-<nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+            <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/child" style={{ color: "white" }}>
-          <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
+          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
         </a>
-        <h3 className="header-title">View Open Chores</h3>
+        <h3 className="header-title">Log Out</h3>
+
       </nav>
             <div className = "container">
       <div className="col-md-8 offset-md-2">
