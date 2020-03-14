@@ -6,7 +6,7 @@ As of 3/2/2020, this application is a work in progress. Check back soon to see t
 
 ### Deployed Application
 
-View the deployed application [here](https://www.com). (To be deployed)
+View the deployed application [here](https://nuggets-2020.herokuapp.com/). (To be deployed)
 
 ## Description
 
