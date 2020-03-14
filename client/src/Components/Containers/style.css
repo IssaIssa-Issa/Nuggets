@@ -14,6 +14,13 @@
   background-color: #FEFFF0;
 }
 
+
+.children-cards {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .KidButton {
   color: #FFFFFF;
   font-family: Fjalla One;

@@ -21,9 +21,7 @@ const EditGoals = () => {
                 console.log("This is the result", newGoal)
             })
     }
-
-
-
+    
     return (
         <div>
             <form>

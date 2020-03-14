@@ -3,13 +3,12 @@ import React from 'react'
 const Transactions = () => {
     return (
       <>
+      {/* NavBar ToDo: Make this a component */}
       <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
-  <a className="navbar-brand" href="/child" style={{ color: "white" }}>
-    <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
-  </a>
-  <h3 className="header-title">Log Out</h3>
-
-</nav>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img></a>
+        <a href="/"><button className="btn btn-success">Log Out</button></a>
+      </nav>
 
       <div >
 

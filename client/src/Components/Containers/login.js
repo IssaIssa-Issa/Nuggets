@@ -16,11 +16,13 @@ import logo from '../../logo.png';
     return (
       <div className="App" >
         <img src={logo} alt="Site Logo" />
-        {/* <div class="card">
-            <div class="card-body">
-              Welcome to Nuggets! An easy way for Parent to reward the hard work done by their kids, and to help the kids build healthy money and spending habits through hard work. Parents and kids work hand in hand to make our App even better everyday!
-            </div>
-        </div> */}
+
+<div>
+  For Demo Purposes:
+  <a href="/parent"><button className= "btn btn-primary">Log in as Parent</button></a>
+  <a href="/child"><button className= "btn btn-primary">Log in as Child</button></a></div>
+
+
           <header className="App-header">
               {
                   auth0Client.isAuthenticated() &&

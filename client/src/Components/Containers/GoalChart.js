@@ -37,12 +37,12 @@ const GoalChart = () => {
     return (
 
         <div className="childContainer">
-            <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
-                <a className="navbar-brand" href="/child" style={{ color: "white" }}>
-                    <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
-                    <h3 className="header-title">Log Out</h3>
-                </a>
-            </nav>
+      {/* NavBar ToDo: Make this a component */}
+      <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img></a>
+        <a href="/"><button className="btn btn-success">Log Out</button></a>
+      </nav>
             <h4>All Goals</h4>
             {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
             {goalsArray.length ? (
@@ -83,10 +83,11 @@ const GoalChart = () => {
             <EditGoals />
             <br />
             <br />
-            <nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
-                <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{ "font-size": 15 + "px" }}> © 2020 Copyright: Nuggets</div>
-                </a>
-            </nav>
+{/* Footer ToDo: Make this into Component */}
+<nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
+        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{"font-size": 15 + "px"}}> © 2020 Copyright: Nuggets</div>
+        </a>
+      </nav>
         </div>
 
     )

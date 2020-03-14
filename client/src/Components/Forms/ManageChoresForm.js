@@ -46,11 +46,11 @@ const ManageChoresForm = () => {
 
   return (
     <div className="parentContainer">
-    <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
-        <a className="navbar-brand" href="/parent" style={{ color: "white" }}>
-          <img src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img>
-        </a>
-        <h3 className="header-title">Manage Chores</h3>
+      {/* NavBar ToDo: Make this a component */}
+      <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
+        <a className="navbar-brand" href="/child" style={{ color: "white" }}>
+          <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img></a>
+        <a href="/"><button className="btn btn-success">Log Out</button></a>
       </nav>
       <div className="col-md-8 offset-md-2">
         <br />
@@ -102,10 +102,9 @@ const ManageChoresForm = () => {
       <br />
       <br />
 
-      {/* To Do: Footer Code, do we want this to be a component? */}
-      <nav className="footer parentFooter" style={{ backgroundColor: "#20638C" }}>
-        <a className="navbar-brand" href="/parent"> <div class="footer-copyright text-white font-small"> © 2020 Copyright: Nuggets</div>
-          <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+{/* Footer ToDo: Make this into Component */}
+<nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
+        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{"font-size": 15 + "px"}}> © 2020 Copyright: Nuggets</div>
         </a>
       </nav>
     </div>
