@@ -1,5 +1,5 @@
 .childContainer {
-  background-image: url(../../dotBackground.jpg);
+  background-image: url(./../../dotBackground.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
