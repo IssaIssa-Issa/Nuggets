@@ -2,6 +2,7 @@
   background-image: url(https://wallpapertag.com/wallpaper/full/a/3/c/128830-widescreen-polka-dot-wallpaper-1920x1080-for-phones.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100%;
 }
 
 .choretxt {
@@ -16,7 +17,7 @@
 
 
 .children-cards {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
 }

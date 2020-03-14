@@ -11,7 +11,6 @@ const ManageFundsForm = () => {
 
   useEffect(() => {
     loadTransactions()
-    loadTransactions()
   }, [])
 
   // Loads all transactions

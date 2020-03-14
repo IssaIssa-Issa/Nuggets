@@ -1,8 +1,66 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import '../Containers/style.css'
+import { List, ListItem } from "../List/index";
+
 
 const Transactions = () => {
-    return (
-      <>
+
+  const [childrenArray, setChildrenArray] = useState([])
+  const [transactionsArray, setTransactionsArray] = useState([])
+  const [choresArray, setChoresArray] = useState([])
+
+
+
+  useEffect(() => {
+    loadChildren()
+    loadTransactions()
+    loadChores()
+  }, [])
+
+
+  // Loads all chores
+  function loadChores() {
+    axios.get("/api/chores/")
+      .then(res => {
+        var doneChores = []
+        for (var i = 0; i < res.data.length; i++) {
+          if (res.data[i].date_completed !== null) {
+            doneChores.push(res.data[i]);
+          }
+        }
+        setChoresArray(doneChores)
+      }
+
+      )
+      .catch(err => console.log(err));
+  };
+
+
+  // Loads all children
+  function loadChildren() {
+    axios.get("/api/children/")
+      .then(res =>
+        setChildrenArray(res.data),
+      )
+      .catch(err => console.log(err));
+  };
+
+
+  // Loads all transactions
+  function loadTransactions() {
+    axios.get("/api/transaction/")
+      .then(res =>
+        setTransactionsArray(res.data),
+      )
+      .catch(err => console.log(err));
+  };
+
+
+
+
+  return (
+    <div className="childContainer" >
       {/* NavBar ToDo: Make this a component */}
       <nav className="navbar" style={{ backgroundColor: "#20638C" }}>
         <a className="navbar-brand" href="/child" style={{ color: "white" }}>
@@ -12,50 +70,77 @@ const Transactions = () => {
 
       <div >
 
-        <h1 style={{textAlign: "center"}}>Balance $10</h1>
-        <div class="col-md-8 offset-md-2" style={{background: "white"}}>
-        <table className="table" >
-          <thead>
-            <tr>
-              <th scope="col">Date Completed</th>
-              <th scope="col">Chore</th>
-              <th scope="col">Amount</th>
-              <th scope="col">Status</th>
-              <th scope="col">Date Approved</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3/1/2020</td>
-              <td>Empty Dishwaser</td>
-              <td>$1.00</td>
-              <td>Approved</td>
-              <td>3/2/2020</td>
+        {/* Loops through all children in db and creates cards for each */}
+        {childrenArray.length ? (
+          <div className="children-cards">
+            {childrenArray.map(children => {
+              return (
+                <div className="circleRed">
+                  <br />
+                  <br />
+                  <b><h3>{children.child_name}</h3></b>
+                  <h4><i>Current Balance:</i> {children.balance}</h4>
+                </div>
+              )
+            })}
+          </div>
+        ) : (<></>
+          )
+        }
 
-            </tr>
-            <tr>
-              <td>3/2/2020</td>
-              <td>Take our Trash</td>
-              <td>$2.00</td>
-              <td>Approved</td>
-              <td>3/2/2020</td>
+        <div class="col-md-8 offset-md-2" style={{ background: "white" }}>
+          {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
+          {choresArray.length ? (
+            <List>
+              {choresArray.map(chore => {
+                return (
+                  <ListItem key={chore.chores_id}>
+                    <h6>
+                      <b> {chore.chore_name} </b> for: <i> ${chore.amount}.00 </i>
+                    </h6>
+                    <h6>Date Completed:</h6>
+                    {Date(chore.date_completed)}
+                  </ListItem>
 
-            </tr>
-            <tr>
-              <td>3/3/2020</td>
-              <td>Vacuum</td>
-              <td>$1.00</td>
-              <td>Try Again</td>
-              <td>3/3/2020</td>
+                );
+              })}
+            </List>
+          ) : (<></>
+              // This will render when there are no chores to be displayed
+            )}
 
-            </tr>
-          </tbody>
-        </table>
+
+
+          {/* Goes through Transactions Array and lists out each transaction. Transaction name and amount are displayed and a delete button is created for each transaction */}
+          {transactionsArray.length ? (
+            <List>
+              {transactionsArray.map(transaction => {
+                return (
+                  <ListItem key={transaction.transaction_id}>
+
+                    <strong>
+                      {transaction.date} <b> {transaction.admin_comments} </b> Amount Withdrawn: <i>- ${transaction.amount}.00 </i>
+                    </strong>
+                  </ListItem>
+                );
+              })}
+            </List>
+          ) : (<></>
+              // This will render when there are no transactions to be displayed
+            )}
+
+        </div>
 
       </div>
-
+      <br />
+      <br />
+      <br />
+      {/* Footer ToDo: Make this into Component */}
+      <nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
+        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{ "font-size": 15 + "px" }}> © 2020 Copyright: Nuggets</div>
+        </a>
+      </nav>
     </div>
-    </>
   )
 }
 

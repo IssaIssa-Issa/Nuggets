@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import KidCard from '../Cards/KidCard'
-import PendingTranList from './PendingTranList'
+// import PendingTranList from './PendingTranList'
 import ManageFundsBtn from '../Buttons/manageFundsBtn'
 import ManageChoresBtn from '../Buttons/manageChoresBtn'
 import axios from 'axios'
@@ -82,7 +82,7 @@ let sumOfTransactions
       </nav>
       <br></br>
       <br></br>
-<div className = "children-cards-div">
+<div className = "children-cards-div row">
 {/* Loops through all children in db and creates cards for each */}
       {childrenArray.length ? (
         <div className="children-cards">
@@ -110,7 +110,7 @@ let sumOfTransactions
           <br></br>
           <br></br>
 
-          <PendingTranList />
+          {/* <PendingTranList /> */}
 
          
 {/* Footer ToDo: Make this into Component */}
