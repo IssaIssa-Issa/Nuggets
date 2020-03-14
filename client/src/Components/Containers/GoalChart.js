@@ -48,11 +48,13 @@ const GoalChart = () => {
             {goalsArray.length ? (
                 <div>
                     {goalsArray.map(goal => {
+                        console.log(goal.goal_color)
                         return (
-                            <div>
+                            <div key={goal.goal_id}>
                             <b> {goal.goal_name} </b> ${goal.goal_amount}.00
                             <DeleteBtn onClick={() => deleteGoal(goal.goal_id)} />
-                            <div className="`bar bar-100 lime">
+
+                            <div className={goal.goal_color + " bar bar-20"}>
                                 <div className="face top">
                                     <div className="growing-bar"></div>
                                 </div>
@@ -85,7 +87,7 @@ const GoalChart = () => {
             <br />
 {/* Footer ToDo: Make this into Component */}
 <nav className="footer parentFooter" style={{ backgroundColor: "white" }}>
-        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{"font-size": 15 + "px"}}> © 2020 Copyright: Nuggets</div>
+        <a className="navbar-brand" href="/parent"> <div className="footer-copyright text-gray font-small" style={{"fontSize": 15 + "px"}}> © 2020 Copyright: Nuggets</div>
         </a>
       </nav>
         </div>

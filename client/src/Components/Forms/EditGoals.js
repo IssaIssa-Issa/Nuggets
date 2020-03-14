@@ -25,12 +25,17 @@ const EditGoals = () => {
     return (
         <div>
             <form>
-                <div class="col-md-6 offset-md-3">
+                <div className="col-md-6 offset-md-3">
                     <h4>Add a new Goal</h4>
                     <h6>Choose a Color!</h6>
                     <select className="form-control" type="Color" onChange={e => setColor(e.target.value)} id="goalColor">
-                        <option>Pink</option>
-                        <option>Red</option>
+                        <option>pink</option>
+                        <option>red</option>
+                        <option>blue</option>
+                        <option>lime</option>
+                        <option>purple</option>
+                        <option>yellow</option>
+                        <option>orange</option>
                     </select>
                     <br />
                     <br />

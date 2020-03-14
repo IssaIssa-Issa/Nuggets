@@ -170,7 +170,22 @@ router.route("/api/chores/:chores_id").delete(function (req, res) {
         res.json(dbNuggets);
       })
   });
-  // DELETE (delete chore)
+
+
+// DELETE (delete goal)
+router.route("/api/goals/:goal_id").delete(function (req, res) {
+    db.Goals.destroy({
+      where: {
+        goal_id: req.params.goal_id
+      }
+    })
+      .then(function (dbNuggets) {
+        res.json(dbNuggets);
+      })
+  });
+
+
+  // DELETE (delete transaction)
 router.route("/api/transaction/:transaction_id").delete(function (req, res) {
     db.Transactions.destroy({
       where: {
