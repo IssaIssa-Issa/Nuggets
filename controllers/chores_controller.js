@@ -22,6 +22,15 @@ const router = require("express").Router()
                 res.json(dbNuggets);
             })
     });
+
+    // GET (show all goals)
+    router.route("/api/goals").get(function (req, res) {
+        db.Goals.findAll({})
+            .then(function (dbNuggets) {
+                res.json(dbNuggets);
+            })
+    });
+
     // GET (show all children)
     router.route("/api/children/").get(function (req, res) {
         db.Children.findAll({})
@@ -56,12 +65,27 @@ const router = require("express").Router()
         db.Chores.create({
             admin_id: req.body.admin_id,
             chore_name: req.body.chore_name,
-            amount: req.body.amount,
+            chore_amount: req.body.chore_amount,
         })
             .then(function (dbNuggets) {
                 res.send(dbNuggets);
             });
     });
+
+    // POST (add goal)
+    router.route("/api/goals/").post(function (req, res) {
+        db.Goals.create({
+            child_id: req.body.admin_id,
+            goal_name: req.body.goal_name,
+            goal_amount: req.body.goal_amount,
+            goal_color: req.body.goal_color
+        })
+            .then(function (dbNuggets) {
+                res.send(dbNuggets);
+            });
+    });
+
+
     //POST (add transaction)
     router.route("/api/transaction/").post(function (req, res) {
         db.Transactions.create({
