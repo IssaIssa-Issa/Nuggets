@@ -10,16 +10,16 @@ const db = {};
 
 let sequelize;
 
-if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL, {
-  });
-} else {
+// if (process.env.JAWSDB_URL) {
+//   sequelize = new Sequelize(process.env.JAWSDB_URL, {
+//   });
+// } else {
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-}
+// }
 
 fs
   .readdirSync(__dirname)
@@ -38,5 +38,6 @@ Object.keys(db).forEach(modelName => {
 });
 
 db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
 module.exports = db;
