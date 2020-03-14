@@ -48,7 +48,8 @@ let sumOfTransactions
       axios.get("/api/chores/")
       .then(res => {
         for (var i = 0; i < res.data.length; i++) {
-          chores.push(parseInt(res.data[i].amount))
+          if (res.data[i].date_completed !== null) {
+          chores.push(parseInt(res.data[i].amount))}
         }
         let choresSum = chores => chores.reduce((a,b) => a + b, 0)
         console.log(choresSum(chores))

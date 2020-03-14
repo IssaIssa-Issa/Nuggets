@@ -145,8 +145,8 @@ const router = require("express").Router()
             res.json(dbNuggets);
           })
       });
-          // UPDATE (update chore)
-    router.route("/api/chores/:child_id").put(function (req, res) {
+          // UPDATE (update child)
+    router.route("/api/children/:child_id").put(function (req, res) {
         db.Children.update({
             balance: req.body.balance
         },{
