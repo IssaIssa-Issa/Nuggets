@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-const env = process.env.JAWSDB_URL || 'development';
+const env = "mysql://jcl67pkw16l8ij0o:kgqyynhka6p3m737@pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zlg40g326fuh2g1t" || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
