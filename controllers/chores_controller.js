@@ -65,7 +65,7 @@ const router = require("express").Router()
         db.Chores.create({
             admin_id: req.body.admin_id,
             chore_name: req.body.chore_name,
-            chore_amount: req.body.chore_amount,
+            amount: req.body.amount,
         })
             .then(function (dbNuggets) {
                 res.send(dbNuggets);
