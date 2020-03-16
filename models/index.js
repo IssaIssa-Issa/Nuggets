@@ -10,7 +10,7 @@ const db = {};
 
 require('dotenv').config()
 
-sequelize = new Sequelize(process.env.JAWS_URL)
+sequelize = new Sequelize(process.env.JAWSDB_URL)
 
 fs
   .readdirSync(__dirname)
