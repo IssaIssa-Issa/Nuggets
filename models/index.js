@@ -5,27 +5,16 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-// const config = require(path.join(__dirname, '../config/config.json')[env]);
+const config = require(path.join(__dirname, '../config/config.json')[env]);
 const db = {};
 
 require('dotenv').config()
 
-var mysql = require('mysql');
-
-var connection;
-if (process.env.JAWSDB_URL) {
-    // Database is JawsDB on Heroku
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-    // Database is local
-    connection = mysql.createConnection({
-        port: 3001,
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'database_development'
-    })
-};
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
 
 fs
   .readdirSync(__dirname)
