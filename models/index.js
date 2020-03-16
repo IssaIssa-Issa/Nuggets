@@ -4,11 +4,13 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
-const env = "mysql://jcl67pkw16l8ij0o:kgqyynhka6p3m737@pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zlg40g326fuh2g1t" || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+// const env = process.env.DB || 'development';
+const config = require(__dirname + './../config/config.js')[env];
 const db = {};
 
 let sequelize;
+require('dotenv').config();
+
 
 // if (process.env.JAWSDB_URL) {
 //   sequelize = new Sequelize(process.env.JAWSDB_URL, {
