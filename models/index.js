@@ -10,7 +10,22 @@ const db = {};
 
 require('dotenv').config()
 
-sequelize = new Sequelize(process.env.JAWSDB_URL)
+var mysql = require('mysql');
+
+var connection;
+if (process.env.JAWSDB_URL) {
+    // Database is JawsDB on Heroku
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    // Database is local
+    connection = mysql.createConnection({
+        port: 3001,
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'database_development'
+    })
+};
 
 fs
   .readdirSync(__dirname)
