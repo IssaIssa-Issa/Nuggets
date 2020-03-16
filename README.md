@@ -1,12 +1,8 @@
 # Nuggets
 
-### Project Status
-
-As of 3/2/2020, this application is a work in progress. Check back soon to see the completed app!
-
 ### Deployed Application
 
-View the deployed application [here](https://nuggets-2020.herokuapp.com/). (To be deployed)
+View the deployed application [here](https://nuggets-2020.herokuapp.com/).
 
 ## Description
 
