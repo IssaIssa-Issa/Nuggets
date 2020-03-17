@@ -13,6 +13,24 @@ import EditGoals from './Components/Forms/EditGoals';
 import ViewAllChores from './Components/Containers/ViewAllChores';
 
 function App() {
+    state = {
+        message: "",
+        error: "",
+        eee: "",
+        text: ""
+      };
+    
+      componentDidMount = () => this.fetchAPIMessage();
+    
+      fetchAPIMessage = async () => {
+        try {
+          const res = await fetch(`/api/message`);
+          const { message } = await res.json();
+          this.setState({ message });
+        } catch (err) {
+          console.error(err);
+        }
+      };
         return (
           <div>
       <Router>
