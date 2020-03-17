@@ -31,10 +31,6 @@ if (process.env.NODE_ENV === 'production') {
     });
   }
 
-  if ('development' === app.get('env')) {
-    app.use(express.errorHandler());
-  }
-
 // app.use(express.static(path.join(__dirname, './client/build')));
 // app.use(express.static(path.join(__dirname, './client/public')));
 
