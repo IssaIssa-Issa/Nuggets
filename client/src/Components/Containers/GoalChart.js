@@ -43,15 +43,16 @@ const GoalChart = () => {
           <img id="childFooterLogo" src="images/logo.png" width="100px" className="d-inline-block align-top" alt="Logo"></img></a>
         <a href="/"><button className="btn btn-success">Log Out</button></a>
       </nav>
-            <h4>All Goals</h4>
+            <h2>All Goals</h2>
             {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
             {goalsArray.length ? (
                 <div>
                     {goalsArray.map(goal => {
                         console.log(goal.goal_color)
                         return (
-                            <div key={goal.goal_id}>
-                            <b> {goal.goal_name} </b> ${goal.goal_amount}.00
+                            <div key={goal.goal_id} className="row">
+                                <div className = "col-md-8 offset-md-2">
+                            <h3> {goal.goal_name} </h3> <h3>${goal.goal_amount}.00</h3>
                             <DeleteBtn onClick={() => deleteGoal(goal.goal_id)} />
 
                             <div className={goal.goal_color + " bar bar-20"}>
@@ -73,6 +74,7 @@ const GoalChart = () => {
                               <br />
                                 <br />
                                 <br />
+                            </div>
                             </div>
                                     )
                     })}

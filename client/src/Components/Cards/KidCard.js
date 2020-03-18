@@ -14,7 +14,7 @@ const KidCard = (props) => {
     history.push("/Goals");
   }
     return(
-  <div className="card" style={{width: 400 + "px"}}>
+  <div className="card">
     <div className="card-body">
     {/* To Do: Get image source as part of the db */}
   <img src="images/computer.png" style={{width: 200 + "px"}} className="card-img-top" alt="computer"></img>
