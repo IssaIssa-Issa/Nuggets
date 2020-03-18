@@ -1,18 +1,20 @@
 # Nuggets
 
+![Nuggets Logo](https://imgur.com/CPIJxWN)
+
 ### Deployed Application
 
 View the deployed application [here](https://nuggets-2020.herokuapp.com/).
 
 ## Description
 
-Nuggets is an application build with React that is a tool for caretakers and children to keep track of chores and transactions.  
+Nuggets is a react application which acts as a tool for parents/caretakers and children to keep track of chores and transactions.  
 
 ### Features
  * Parents/Caretaker can add chores along with an amount of money the chore is worth
  * Parents can also add or subtract funds from their child's account
  * Children can select chores and mark as complete, once approved, the amount will be added to the account
-* Children can also create goals and practice personal finance with interactive tools
+* Children can also create goals and practice personal finance with interactive tools (Feature in development)
 
 ## User Stories
 
@@ -35,21 +37,28 @@ AS A child, I WANT an application that lets me pick chores I want to do and adds
 * AuthO (For User Authentication)
 * Netlify (For Hosting)
 
-## Usability and Design
+## ScreenShots
 
-This application was developed with a "mobile-first" design.
+
+Parent Dashboard:
+![Parent Dashboard](https://imgur.com/zzXObRw)
+
+Child Dashboard:
+![Child Dashboard](https://imgur.com/F0VrIGq)
+
+Transactions:
+![Nuggets Logo](https://imgur.com/6aoWhy5)
 
 ### FlowChart
 
 ![Flow Chart](https://i.imgur.com/n85BgcT.jpg)
 
-## ScreenShots
 
 ## Contributors and Roles
 
-Elizabeth O'Leary: Front End Design, Concept, React Logic
-Kayla Kuhlman: API Routes, Back-end Design
-Issa Issa: User Authentication(AuthO), Sassy CSS, Interactive Goals Page
+Elizabeth O'Leary: Front-end Development, Concept, React Logic
+Kayla Kuhlman: API Routes, Back-end Development, mySQL Database, Front-End CSS
+Issa Issa: User Authentication(AuthO), Sassy CSS Goals Bar
 
 ## Acknowledgments
 
