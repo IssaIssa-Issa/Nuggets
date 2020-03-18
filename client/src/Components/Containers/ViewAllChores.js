@@ -7,7 +7,7 @@ const ViewAllChores = () => {
   const [date, setDate] = useState()
   useEffect(() => {
     loadChores()
-    updateChore()
+    calculateBalance()
   }, [])
 
 
@@ -22,19 +22,69 @@ const ViewAllChores = () => {
             }
         }
        setChoresArray(activeChores)
+       calculateBalance()
       }
 
       )
       .catch(err => console.log(err));
   };
 
+// Function to Calculate Transactions
 
+  //Global Variables for Balance Calculation
+  let newBalance
+  let transactions = []
+  let chores = []
+  let sumOfChores
+  let sumOfTransactions
+  
+
+
+  function calculateBalance() {
+    //Axios call to get transactions
+    axios.get("/api/transaction/")
+    .then(res => {
+      for (var i = 0; i < res.data.length; i++) {
+        transactions.push(parseInt(res.data[i].amount))
+    }
+      let transactionSum = transactions => transactions.reduce((a,b) => a + b, 0)
+      console.log(transactionSum(transactions))
+      sumOfTransactions = transactionSum(transactions)  
+      //Axios call to get chores
+      axios.get("/api/chores/")
+      .then(res => {
+        for (var i = 0; i < res.data.length; i++) {
+          if (res.data[i].date_completed !== null) {
+          chores.push(parseInt(res.data[i].amount))}
+        }
+        let choresSum = chores => chores.reduce((a,b) => a + b, 0)
+        console.log(choresSum(chores))
+        sumOfChores = choresSum(chores)
+
+        //calculation
+        newBalance = sumOfChores-sumOfTransactions;
+        console.log(newBalance)
+    
+        //Axios call to put balance into database
+ 
+        axios.put(`/api/children/1`, {balance: newBalance}).then(res => {
+          console.log('saved successfully')
+          
+            }
+        ).catch(err => console.log(err));
+
+      } 
+    )
+    .catch(err => console.log(err));
+    })
+}
 
   function updateChore(chores_id) {
     console.log(date)
     console.log(chores_id)
     axios.put(`/api/chores/${chores_id}`, { date_completed: date }).then(res => {
       console.log('saved successfully')
+      window.location.reload(false);
     }
     ).catch(err => console.log(err));
   }
@@ -50,7 +100,6 @@ const ViewAllChores = () => {
         <div className="col-md-8 offset-md-2">
           <br />
           <br />
-          <h3>Available Chores</h3>
             <h4>Mark Chores Complete</h4>
           {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
           {choresArray.length ? (
