@@ -16,8 +16,16 @@ const ManageChoresForm = () => {
   // Loads all chores
   function loadChores() {
     axios.get("/api/chores/")
-      .then(res =>
-        setChoresArray(res.data),
+      .then(res => {
+        var activeChores = []
+        for (var i = 0; i < res.data.length; i++) {
+          if (res.data[i].date_completed === null) {
+            activeChores.push(res.data[i]);
+            }
+        }
+       setChoresArray(activeChores)
+      }
+
       )
       .catch(err => console.log(err));
   };

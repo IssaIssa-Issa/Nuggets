@@ -50,7 +50,8 @@ const ViewAllChores = () => {
         <div className="col-md-8 offset-md-2">
           <br />
           <br />
-          <h4>Mark Chores Complete</h4>
+          <h3>Available Chores</h3>
+            <h4>Mark Chores Complete</h4>
           {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
           {choresArray.length ? (
             <List>

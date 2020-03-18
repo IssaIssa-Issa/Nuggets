@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../Containers/style.css'
 import { List, ListItem } from "../List/index";
+import moment from "moment"
 
 
 const Transactions = () => {
@@ -119,11 +120,11 @@ function calculateBalance() {
           <div className="children-cards">
             {childrenArray.map(children => {
               return (
-                <div className="circleRed">
+                <div>
                   <br />
                   <br />
                   <b><h3>{children.child_name}</h3></b>
-                  <h4><i>Current Balance:</i> {children.balance}</h4>
+                  <h4><i>Current Balance:</i> ${children.balance}.00</h4>
                 </div>
               )
             })}
@@ -132,18 +133,16 @@ function calculateBalance() {
           )
         }
 
-        <div class="col-md-8 offset-md-2" style={{ background: "white" }}>
+        <div class="col-md-8 offset-md-2">
           {/* Goes through Chores Array and lists out each chore. Chore name and amount are displayed and a delete button is created for each chore */}
           {choresArray.length ? (
-            <List>
+            <List style={{fontColor:"green"} + '!important'}>
               {choresArray.map(chore => {
                 return (
                   <ListItem key={chore.chores_id}>
                     <h6>
-                      <b> {chore.chore_name} </b> for: <i> ${chore.amount}.00 </i>
+                      + <i> ${chore.amount}.00 </i> Deposit for Completed Chore: <b> {chore.chore_name} </b> on {moment(chore.date_completed).format('L')} 
                     </h6>
-                    <h6>Date Completed:</h6>
-                    {Date(chore.date_completed)}
                   </ListItem>
 
                 );
@@ -157,14 +156,14 @@ function calculateBalance() {
 
           {/* Goes through Transactions Array and lists out each transaction. Transaction name and amount are displayed and a delete button is created for each transaction */}
           {transactionsArray.length ? (
-            <List>
+            <List style={{fontColor: "red"} + '!important'}>
               {transactionsArray.map(transaction => {
                 return (
                   <ListItem key={transaction.transaction_id}>
 
-                    <strong>
-                      {transaction.date} <b> {transaction.admin_comments} </b> Amount Withdrawn: <i>- ${transaction.amount}.00 </i>
-                    </strong>
+                    <h6>
+                    - <i> ${transaction.amount}.00 </i> Withdrawl For: <b>{transaction.admin_comments} </b> on {moment(transaction.date).format('L')}
+                    </h6>
                   </ListItem>
                 );
               })}

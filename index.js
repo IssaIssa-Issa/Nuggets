@@ -7,7 +7,6 @@ var db = require ("./models");
 const path = require('path')
 const apiRoute = require("./controllers/chores_controller")
 
-
 require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,10 +23,6 @@ app.use((err, req, res, next) => {
 
 app.use(apiRoute)
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
-
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, 'client/build')));
@@ -36,10 +31,6 @@ if (process.env.NODE_ENV === 'production') {
       res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     });
   }
-
-// app.get('*', function(req, res) {
-// 	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
-// });
 
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
