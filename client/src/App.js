@@ -12,7 +12,8 @@ import MyResponsiveBar from './Components/Containers/GoalChart';
 import EditGoals from './Components/Forms/EditGoals';
 import ViewAllChores from './Components/Containers/ViewAllChores';
 
-function App() {
+
+export default class App extends Component  {
     state = {
         message: "",
         error: "",
@@ -31,7 +32,7 @@ function App() {
           console.error(err);
         }
       };
-        return (
+      render = () => (
           <div>
       <Router>
               <Route exact path="/" component={login} />
@@ -47,4 +48,3 @@ function App() {
           </Router>
       </div>    );
       }
-export default App;
