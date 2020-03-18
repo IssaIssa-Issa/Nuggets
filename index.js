@@ -28,8 +28,6 @@ app.use(apiRoute)
 //   app.use(express.static("client/build"));
 // }
 
-
-
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, 'client/build')));
@@ -39,12 +37,9 @@ if (process.env.NODE_ENV === 'production') {
     });
   }
 
-// app.use(express.static(path.join(__dirname, './client/build')));
-// app.use(express.static(path.join(__dirname, './client/public')));
-
-app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
-});
+// app.get('*', function(req, res) {
+// 	res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
+// });
 
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
