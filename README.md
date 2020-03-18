@@ -1,6 +1,6 @@
 # Nuggets
 
-![Nuggets Logo](https://imgur.com/CPIJxWN)
+![Nuggets Logo](https://i.imgur.com/CPIJxWN.jpg)
 
 ### Deployed Application
 
@@ -41,13 +41,13 @@ AS A child, I WANT an application that lets me pick chores I want to do and adds
 
 
 Parent Dashboard:
-![Parent Dashboard](https://imgur.com/zzXObRw)
+![Parent Dashboard](https://i.imgur.com/zzXObRw.jpg)
 
 Child Dashboard:
-![Child Dashboard](https://imgur.com/F0VrIGq)
+![Child Dashboard](https://i.imgur.com/F0VrIGq.jpg)
 
 Transactions:
-![Nuggets Logo](https://imgur.com/6aoWhy5)
+![Nuggets Logo](https://i.imgur.com/6aoWhy5.jpg)
 
 ### FlowChart
 
